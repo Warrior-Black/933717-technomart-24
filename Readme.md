@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Александр Чудскаев](https://up.htmlacademy.ru/htmlcss/24/user/933717).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Прокопеня](https://htmlacademy.ru/profile/sera_prokop).
 
 ---
 
