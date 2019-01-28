@@ -93,22 +93,42 @@
             <section class="perforators">
                 <h1 class="visibility-hidden">Перфораторы</h1>
                 <section class="filter">
-                    <h2 class="visibility-hidden">Фильтры</h2>
-                    <ul class="manufacturer">
-                        <li class="checked-item">BOSH</li>
-                        <li>ИНТЕРСКОЛ</li>
-                        <li class="checked-item">MAKITA</li>
-                        <li>DEWALT</li>
-                        <li>HITACHI</li>
-                    </ul>
-                    <ul class="power">
-                        <li class="checked-item">BOSH</li>
-                        <li>ИНТЕРСКОЛ</li>
-                        <li class="checked-item">MAKITA</li>
-                        <li>DEWALT</li>
-                        <li>HITACHI</li>
-                    </ul>
+                    <h2 class="visibility-hidden">фильтр:</h2>
+                    <div class="price">
+                        <h3>цена:</h3>
+                        <input type="range" name="range" min="0" max="30000" step="1" value="25000">
+                        <input type="text" name="text" value="0"/>
+                        <input type="text" name="text" value="30000"/>
+                    </div>
+                    <div class="manufacturer">
+                        <h3>производители:</h3>
+                        <ul>
+                            <li class="checked-item">BOSH</li>
+                            <li>ИНТЕРСКОЛ</li>
+                            <li class="checked-item">MAKITA</li>
+                            <li>DEWALT</li>
+                            <li>HITACHI</li>
+                        </ul>
+                    </div>
+                    <div class="power">
+                        <h3>питание:</h3>
+                        <ul>
+                            <li class="checked-item">BOSH</li>
+                            <li>ИНТЕРСКОЛ</li>
+                            <li class="checked-item">MAKITA</li>
+                            <li>DEWALT</li>
+                            <li>HITACHI</li>
+                        </ul>
+                    </div>
                     <button type="button" name="button">ПОКАЗАТЬ</button>
+                </section>
+                <section class="sorting">
+                    <h2>сортировка:</h2>
+                    <a href="#" class="sorting-selected">по цене</a>
+                    <a href="#" class="sorting">по типу</a>
+                    <a href="#" class="sorting">по функционалу</a>
+                    <a href="#" class="sorting-top sorting-top-selected">по возрастанию</a>
+                    <a href="#" class="sorting-bottom">по убыванию</a>
                 </section>
                 <section class="products">
                     <h2 class="title">товары:</h2>
@@ -187,6 +207,28 @@
                         </li>
                     </ul>
                 </section>
+            </section>
+            <secttion class="paginator">
+                <ul>
+                    <li>
+                        <a href="#" class="selected">1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="">2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="">3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="">следующая</a>
+                    </li>
+                </ul>
+            </secttion>
+            <section class="about">
+                <h2>пара слов о перфораторах</h2>
+                <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br />
+                Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+                </p>
             </section>
         </main>
         <footer class="main-footer">
