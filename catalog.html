@@ -101,46 +101,46 @@
                         <input type="text" name="text" value="0"/>
                         <input type="text" name="text" value="30000"/>
                     </div>
-                    <div class="filter__manufacturer">
-                        <h3>производители:</h3>
-                        <form class="">
+                    <form action="index.html" method="post">
+                        <div class="filter__manufacturer">
+                            <h3>производители:</h3>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="manufacturer-bosh" checked />
+                                        <label for="manufacturer-bosh">BOSH</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="manufacturer-interskol" />
+                                        <label for="manufacturer-interskol">ИНТЕРСКОЛ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="manufacturer-makita" checked />
+                                        <label for="manufacturer-makita">MAKITA</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="manufacturer-devolt" />
+                                        <label for="manufacturer-devolt">DEWALT</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="manufacturer-hitachi" />
+                                        <label for="manufacturer-hitachi">HITACHI</label>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="filter__power">
+                            <h3>питание:</h3>
                             <ul>
                                 <li>
-                                    <input type="checkbox" id="manufacturer-bosh" checked />
-                                    <label for="manufacturer-bosh">BOSH</label>
+                                    <input type="radio" name="power" id="power-battery" checked />
+                                    <label for="power-battery">аккумуляторные</label>
                                 </li>
                                 <li>
-                                    <input type="checkbox" id="manufacturer-interskol" />
-                                    <label for="manufacturer-interskol">ИНТЕРСКОЛ</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="manufacturer-makita" checked />
-                                    <label for="manufacturer-makita">MAKITA</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="manufacturer-devolt" />
-                                    <label for="manufacturer-devolt">DEWALT</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" id="manufacturer-hitachi" />
-                                    <label for="manufacturer-hitachi">HITACHI</label>
+                                    <input type="radio" name="power" id="power-line" />
+                                    <label for="power-line">сетевые</label>
                                 </li>
                             </ul>
-                        </form>
-                    </div>
-                    <div class="filter__power">
-                        <h3>питание:</h3>
-                        <ul>
-                            <li>
-                                <input type="radio" name="power" id="power-battery" checked />
-                                <label for="power-battery">аккумуляторные</label>
-                            </li>
-                            <li>
-                                <input type="radio" name="power" id="power-line" />
-                                <label for="power-line">сетевые</label>
-                            </li>
-                        </ul>
-                    </div>
+                        </div>
+                    </form>
                     <button type="button" name="button">ПОКАЗАТЬ</button>
                 </section>
                 <section class="sorting">
@@ -229,7 +229,8 @@
                     </ul>
                 </section>
             </section>
-            <secttion class="paginator">
+            <section class="paginator">
+                <h2 class="visually-hidden">Навигация по страницам</h2>
                 <ul>
                     <li>
                         <a href="#" class="">предыдущая</a>
@@ -247,7 +248,7 @@
                         <a href="#" class="">следующая</a>
                     </li>
                 </ul>
-            </secttion>
+            </section>
             <section class="about">
                 <h2>пара слов о перфораторах</h2>
                 <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br />

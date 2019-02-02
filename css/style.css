@@ -18,9 +18,9 @@ ul {
 .filter__power label::before {
     position: absolute;
     top: -5px;
-    left: -44px;
-    width: 23px;
-    height: 23px;
+    left: -40px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #c5c5c5;
     background-color: white;
     border-radius: 2px;
@@ -28,8 +28,8 @@ ul {
 }
 
 .filter__power label::before {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 5px solid #c5c5c5;
 }
@@ -42,10 +42,10 @@ ul {
     z-index: 1;
     width: 0px;
     height: 0px;
-    border: 0px solid white;
     content: "";
     opacity: 0;
-    transition: 0.3s
+    transform: rotate(135deg);
+    transition: 0.2s ease-in;
 }
 
 .filter__power label::after {
@@ -56,17 +56,16 @@ ul {
 
 
 .filter__manufacturer input[type="checkbox"]:checked ~ label::after {
-    top: -3px;
-    left: -38px;
-    width: 20px;
+    top: -8px;
+    left: -34px;
+    width: 22px;
     height: 9px;
-    border: 4px solid #c5c5c5;
-    background: linear-gradient(to bottom, white 20%, transparent 20%);
-    border-bottom-style: none;
-    border-left-style: none;
-    box-shadow: 0px -2px white;
+    box-shadow:
+        0px -1px white,
+        4px -5px #c5c5c5,
+        0px -6px white;
     opacity: 1;
-    transform: rotate(135deg)
+
 }
 
 .filter__power input[type="radio"]:checked ~ label::after {
