@@ -8,10 +8,10 @@
         <header class="main-header">
             <div class="main-header__div">
                 <a href="#" class="logo main-header__div_logo">техномарт</a>
-                <form action="#" method="post">
-                    <input type="search" name="search" value="">
+                <form action="https://echo.htmlacademy.ru" method="post">
+                    <input type="search" name="search" id="header_search" value="" aria-label="поиск по сайту">
+                    <label for="header_search">Поиск:</label>
                 </form>
-                <button class="main-header__div_serch">Поиск</button>
                 <a href="#" class="main-header__div_bookmarks">Закладки:&nbsp;
                     <span>0</span>
                 </a>
@@ -345,16 +345,19 @@
         </section>
         <section  class="modal-window__form_mail">
             <h2 class="visually-hidden">Отправка письма в компанию Техномарт</h2>
-            <form action="#" method="post">
-                <label>Ваше имя:
-                    <input type="text" placeholder="Имя Фамилия" autofocus/>
-                </label>
-                <label>Ваше e-mail:
-                    <input type="email" placeholder="email@example.com" />
-                </label>
-                <label>Текст письма:
-                    <textarea placeholder="В свободной форме"></textarea>
-                </label>
+            <form action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                    <label for="modal-window__form_mail_name">Ваше имя:</label>
+                    <input type="text" name="name" id="modal-window__form_mail_name" placeholder="Имя Фамилия" autofocus/>
+                </p>
+                <p>
+                    <label for="modal-window__form_mail_email">Ваше e-mail:</label>
+                    <input type="email" name="email" id="modal-window__form_mail_email" placeholder="email@example.com" />
+                </p>
+                <p>
+                    <label for="modal-window__form_mail_text">Текст письма:</label>
+                    <textarea name="mail" id="modal-window__form_mail_text" placeholder="В свободной форме"></textarea>
+                </p>
                 <button type="submit" class="btn modal-window__form_mail_btn">отправить</button>
             </form>
             <button class="close-window" aria-label="Закрыть "></button>
