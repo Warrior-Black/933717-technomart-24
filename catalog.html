@@ -3,15 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Техномарт</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
             <div class="main-header-top">
                 <a href="#" class="logo header-logo">техномарт</a>
-                <form>
-                    <input type="search" name="search" value="">
+                <form action="https://echo.htmlacademy.ru" method="post">
+                    <input type="search" name="search" id="header_search" value="" aria-label="поиск по сайту">
+                    <label for="header_search">Поиск:</label>
                 </form>
-                <a href="#" class="header-serch">Поиск</a>
                 <a href="#" class="bookmarks">Закладки:&nbsp;
                     <span>0</span>
                 </a>
@@ -97,30 +98,52 @@
                     <div class="price">
                         <h3>цена:</h3>
                         <input type="range" name="range" min="0" max="30000" step="1" value="25000">
-                        <input type="text" name="text" value="0"/>
-                        <input type="text" name="text" value="30000"/>
+                        <div  class="price-value">
+                            <input type="text" name="text-min" value="0" aria-label="цена товара от"/>
+                            <input type="text" name="text-max" value="30000"  aria-label="цена товара до"/>
+                        </div>
                     </div>
-                    <div class="manufacturer">
-                        <h3>производители:</h3>
-                        <ul>
-                            <li class="checked-item">BOSH</li>
-                            <li>ИНТЕРСКОЛ</li>
-                            <li class="checked-item">MAKITA</li>
-                            <li>DEWALT</li>
-                            <li>HITACHI</li>
-                        </ul>
-                    </div>
-                    <div class="power">
-                        <h3>питание:</h3>
-                        <ul>
-                            <li class="checked-item">BOSH</li>
-                            <li>ИНТЕРСКОЛ</li>
-                            <li class="checked-item">MAKITA</li>
-                            <li>DEWALT</li>
-                            <li>HITACHI</li>
-                        </ul>
-                    </div>
-                    <button type="button" name="button">ПОКАЗАТЬ</button>
+                    <form action="https://echo.htmlacademy.ru" method="post">
+                        <div class="filter__manufacturer">
+                            <h3>производители:</h3>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="bosch" id="manufacturer_bosh" checked />
+                                        <label for="manufacturer_bosh">BOSH</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="interskol" id="manufacturer_interskol" />
+                                        <label for="manufacturer_interskol">ИНТЕРСКОЛ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="makita" id="manufacturer_makita" checked />
+                                        <label for="manufacturer_makita">MAKITA</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="dewalt" id="manufacturer_devolt" />
+                                        <label for="manufacturer_devolt">DEWALT</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="hitachi" id="manufacturer_hitachi" />
+                                        <label for="manufacturer_hitachi">HITACHI</label>
+                                    </li>
+                                </ul>
+                        </div>
+                        <div class="filter__power">
+                            <h3>питание:</h3>
+                            <ul>
+                                <li>
+                                    <input type="radio" name="power" value="battery" id="power_battery" checked />
+                                    <label for="power_battery">аккумуляторные</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="power" value="line" id="power_line" />
+                                    <label for="power_line">сетевые</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="submit" name="button">ПОКАЗАТЬ</button>
+                    </form>
                 </section>
                 <section class="sorting">
                     <h2>сортировка:</h2>
@@ -208,7 +231,8 @@
                     </ul>
                 </section>
             </section>
-            <secttion class="paginator">
+            <section class="paginator">
+                <h2 class="visually-hidden">Навигация по страницам</h2>
                 <ul>
                     <li>
                         <a href="#" class="">предыдущая</a>
@@ -226,12 +250,12 @@
                         <a href="#" class="">следующая</a>
                     </li>
                 </ul>
-            </secttion>
+            </section>
             <section class="about">
                 <h2>пара слов о перфораторах</h2>
-                <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br />
+                <article>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br />
                 Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-                </p>
+                </article>
             </section>
         </main>
         <footer class="main-footer">
