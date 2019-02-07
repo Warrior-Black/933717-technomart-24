@@ -1,8 +1,96 @@
-/*font-family: 'Cuprum', sans-serif;
-font-family: 'PT Sans', sans-serif;*/
-ul {
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: left;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-header {
+    background-color: #f4f7f9
+}
+
+.main-header__top {
+    background-color: #293449;
+}
+
+.main-header__top .main-header__top_logo {
+    background-color: #ee3643;
+}
+
+.main-header__top a {
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #293449;
+}
+
+.main-header__top .main-header__top_place {
+    background-color: #63a63e;
+}
+
+.main-header__section h1 {
+    color: #ee3643;
+    font-size: 16px;
+    line-height: 23px;
+    font-style: italic;
+    width: 200px;
+}
+
+..main-header__section .main-header__section_adress {
+    color: #32425c;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.main-header__section a {
+    color: #32425c;
+}
+
+.main-header__section .main-header__section_phone {
+    color: #ee3643;
+    font-size: 21px;
+    line-height: 21px;
+    border: 3px solid #ffffff;
+}
+
+.main-header__section_authorized .main-header__section_profile {
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.main-header__section_not-authorized,
+.main-header__section_authorized {
     list-style: none;
 }
+
+.main-header__section li {
+    background-color: #ffffff;
+}
+
+.main-header__nav {
+    background-color: #293449;
+}
+
+.main-header__nav a {
+    font-size: 17px;
+    line-height: 17px;
+    color: #ffffff;
+    background-color: #293449;
+}
+
+/*font-family: "Cuprum", "Arial", sans-serif;
+font-family: "PT Sans", "Arial", sans-serif;*/
 
 .filter__manufacturer li,
 .filter__power li {
