@@ -100,6 +100,154 @@ a {
     background-color: #293449;
 }
 
+main h2 {
+    text-transform: uppercase;
+}
+
+main .btn {
+    display: table-cell;
+    background-color: #ee3643;
+    border-radius: 2px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    width: 300px;
+    height: 38px;
+}
+
+/*OFFERS*/
+.offers {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.offers h3 {
+    font-size: 24px;
+    line-height: 30px
+}
+
+.offers .offers__btn {
+    width: 135px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.offers li {
+    width: 300px;
+    height: 123px;
+}
+
+.offers__materials {
+    background-color: #ffbf47;
+}
+
+.offers__tools {
+    background-color: #3bbce3;
+}
+
+.offers__drills,
+.offers__perforators {
+    background-color: #000000;
+}
+
+.offers__slides a {
+    width: 195px;
+    height: 38px;
+    background-color: #ee3643;
+}
+
+.offers__drills h3,
+.offers__perforators h3 {
+    text-transform: uppercase;
+}
+
+.offers__equipment {
+    background-color: #dc91d8;
+}
+
+.offers__discounts {
+    background-color: #8ed78f
+}
+
+.offers__delivery {
+    background-color: #ffc047
+}
+
+/*POPULAR*/
+.title__container {
+    background-color: #f9f5f0;
+    width: 940px;
+    height: 89px;
+}
+
+.popular-product__cards {
+    display: flex;
+    list-style: none;
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.popular-product__cards a {
+    display: none;
+}
+
+.popular-product__card_btn-hover:first-of-type {
+    width: 135px;
+    color: #ffffff;
+    background-color: #63a63e;
+    box-shadow: inset 0 3 0 0 #367315;
+}
+
+.popular-product__card_btn-hover:last-of-type {
+    width: 135px;
+    color: #32425c;
+    background-color: #ffffff;
+    border: 3px solid #63a63e;
+}
+
+.popular-product__card span:first-of-type {
+    color: #a9a9a9;
+    text-decoration: line-through;
+}
+
+.popular-product__card span:last-of-type {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    width: 132px;
+    height: 38px;
+    color: #ffffff;
+    background-color: #ee3643;
+}
+
+.popular-product__card span:last-of-type::after {
+    position: absolute;
+    top: 0;
+    right: -38px;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 19px solid white;
+    border-left:  19px solid #ee3643;
+    background-color: transparent;
+}
+
+.popular-manufacturer__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.popular-manufacturer__list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eaeaea;
+    width: 220px;
+    height: 145px;
+}
 /*
 font-family: "PT Sans", "Arial", sans-serif;*/
 

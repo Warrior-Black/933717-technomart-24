@@ -5,42 +5,42 @@
         <title>HTML Academy: Техномарт</title>
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i|PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <header class="main-header">
-            <div class="main-header-top">
-                <a href="#" class="logo header-logo">техномарт</a>
+            <div class="main-header__top">
+                <a href="index.html" class="logo main-header__top_logo">техномарт</a>
                 <form action="https://echo.htmlacademy.ru" method="post">
                     <input type="search" name="search" id="header_search" value="" aria-label="поиск по сайту">
                     <label for="header_search">Поиск:</label>
                 </form>
-                <a href="#" class="bookmarks">Закладки:&nbsp;
+                <a href="#" class="main-header__top_bookmarks">Закладки:&nbsp;
                     <span>0</span>
                 </a>
-                <a href="#" class=basket>Корзина:&nbsp;
-                    <span>0</span>
+                <a href="#" class="main-header__top_basket">Корзина:&nbsp;
+                    <span>10</span>
                 </a>
-                <a href="#" class="btn btn-place-an-order">Оформить заказ</a>
+                <a href="#" class="btn main-header__top_place">Оформить заказ</a>
             </div>
-            <div class="main-header-middle">
-                <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-                <a href="tel:+78125550555" class="header-phone">+7(812)555-05-55</a>
-                <a href="#" class="header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
-                <ul class="not-authorized">
+            <section class="main-header__section">
+                <p class="main-header__section_title">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+                <a href="tel:+78125550555" class="main-header__section_phone">+7(812)555-05-55</a>
+                <a href="#" class="main-header__section_adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
+                <ul class="main-header__section_not-authorized">
                     <li>
-                        <a href="#" class="btn btn-enter">Войти</a>
+                        <a href="#" class="btn main-header__section_btn-enter">Войти</a>
                     </li>
                     <li>
-                        <a href="#" class="btn btn-registration">Регистрация</a>
+                        <a href="#" class="btn main-header__section_btn-registration">Регистрация</a>
                     </li>
                 </ul>
-                <ul class="authorized">
+                <ul class="main-header__section_authorized">
                     <li>
-                        <a href="#" class="profile">
+                        <a href="#" class="main-header__section_profile">
                             <span></span>Равшан Джамшутович
                         </a>
-                        <a href="#" class="exit-profile">
+                        <a href="#" class="main-header__section_exit-profile">
                             Выход
                         </a>
                     </li>
@@ -51,32 +51,32 @@
                         </p>
                     </li>
                 </ul>
-                <nav class="header-nav">
-                    <ul class="main-nav">
-                        <li class="main-nav-item">
-                            <a href="#">Главная</a>
-                        </li>
-                        <li class="main-nav-item">
-                            <a href="#">Компания</a>
-                        </li>
-                        <li class="main-nav-item">
-                            <a href="catalog.html">Каталог</a>
-                        </li>
-                        <li class="main-nav-item">
-                            <a href="#">Новости</a>
-                        </li>
-                        <li class="main-nav-item">
-                            <a href="#">Спецпредложения</a>
-                        </li>
-                        <li class="main-nav-item">
-                            <a href="#">Доставка</a>
-                        </li>
-                        <li class="main-nav-item">
-                            <a href="#">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            </section>
+            <nav class="main-header__nav">
+                <ul class="main-header__nav_items">
+                    <li class="main-header__nav_item">
+                        <a href="index.html">Главная</a>
+                    </li>
+                    <li class="main-header__nav_item">
+                        <a href="#">Компания</a>
+                    </li>
+                    <li class="main-header__nav_item">
+                        <a href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="main-header__nav_item">
+                        <a href="#">Новости</a>
+                    </li>
+                    <li class="main-header__nav_item">
+                        <a href="#">Спецпредложения</a>
+                    </li>
+                    <li class="main-header__nav_item">
+                        <a href="#">Доставка</a>
+                    </li>
+                    <li class="main-header__nav_item">
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <main>
             <ul class="breadcrumbs">
