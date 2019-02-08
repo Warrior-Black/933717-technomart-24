@@ -690,20 +690,106 @@ li.active a {
     justify-content: space-between;
     width: 940px;
     margin: auto;
+    margin-bottom: 53px;
 }
 
 .main-footer__middle p {
     margin: 0;
+    margin-left: 3px;
     color: #ffffff;
     font-size: 18px;
     line-height: 24px
 }
 
-.main-footer__middle a {
+.main-footer__middle a:first-of-type {
     font-size: inherit;
     color: inherit;
 }
 
+.main-footer__offers-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-footer__offers-nav li {
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffd180;
+    margin-left: 60px
+}
+
+.main-footer__bottom_container {
+    background-color: #293449
+}
+
+.main-footer__bottom {
+    display: flex;
+    width: 940px;
+    margin: auto;
+    padding: 35px 0 30px
+}
+.main-footer__social {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-footer__social li {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #212a3a;
+}
+
+.main-footer__social li:nth-of-type(1) {
+    background-image: url(img/general/icon/vk.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-footer__social li:nth-of-type(2) {
+    background-image: url(img/general/icon/fb.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-footer__social li:nth-of-type(3) {
+    background-image: url(img/general/icon/insta.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main-footer__bottom p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff
+}
+
+.main-footer__bottom p:nth-of-type(1) {
+    width: 227px;
+    margin-right: 162px;
+}
+
+.main-footer__bottom p:nth-of-type(2) {
+    width: 135px;
+    margin-right: 53px;
+    margin-left: auto;
+}
+
+.main-footer__bottom p:nth-of-type(3) {
+    width: 96px;
+}
+
+.main-footer__bottom a {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffd180
+}
 
 /*
 font-family: "PT Sans", "Arial", sans-serif;*/
