@@ -633,12 +633,6 @@ main .btn {
     padding: 0 24px 0 28px;
 }
 
-.popular-product .btn {
-    /*letter-spacing: 0.55px;*/
-    margin-bottom: 1px;
-    padding-top: 1px
-}
-
 .popular-product__title {
     margin: 0;
     font-weight: normal;
@@ -677,7 +671,15 @@ main .btn {
     visibility: hidden;
 }
 
-.popular-product__card a {
+.popular-product__cards a {
+    position: absolute;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-weight: normal;
+    /*letter-spacing: 0.55px;*/
+    margin-bottom: 1px;
+    padding-top: 1px;
     visibility: hidden;
 }
 
@@ -709,14 +711,6 @@ main .btn {
     line-height: 20px;
     margin-top: 8px;
     margin-bottom: auto
-}
-
-.popular-product__cards a {
-    position: absolute;
-    font-size: 14px;
-    line-height: 18px;
-    font-family: "Cuprum", Arial, sans-serif;
-    font-weight: normal;
 }
 
 .popular-product__card_btn-hover:first-of-type {
@@ -782,7 +776,7 @@ main .btn {
 .popular-product__card span:first-of-type {
     font-size: 17px;
     line-height: 18px;
-    color: #a9a9a9;
+    color: #999999;
     text-decoration: line-through;
     margin: 12px 0 10px 3px;
 }
@@ -1448,31 +1442,38 @@ li.active a {
 
 .catalog__perforators_manufacturer {
     padding-top: 15px;
-    padding-bottom: 27px;
     border: 1px solid #c5c5c5;
     border-left: none;
     border-right: none;
 }
 
+.catalog__perforators_filter form {
+    margin-right: 20px
+}
+
 .catalog__perforators_manufacturer h3 {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .catalog__perforators_power h3 {
-    margin-top: 26px;
-    margin-bottom: 27px
+    margin-top: 17px;
+    margin-bottom: 15px
 }
 
 .catalog__perforators_manufacturer li,
 .catalog__perforators_power li {
-    margin-bottom: 15px;
+    margin-bottom: 22px;
     font-size: 15px
+}
+
+.catalog__perforators_manufacturer li:last-of-type {
+    margin-bottom: 23px
 }
 
 .catalog__perforators_manufacturer label,
 .catalog__perforators_power label {
     position: relative;
-    margin-left: 10px;
+    margin-left: 17px;
     cursor: pointer;
 }
 
@@ -1480,27 +1481,29 @@ li.active a {
 .catalog__perforators_power label::before {
     position: absolute;
     top: 0px;
-    left: -25px;
-    width: 20px;
-    height: 20px;
+    left: -34px;
+    width: 23px;
+    height: 22.5px;
     border: 2px solid #c5c5c5;
     background-color: #ffffff;
-    border-radius: 2px;
+    border-radius: 3px;
     content: "";
 }
 
 .catalog__perforators_power label::before {
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
+    top: -2.5px;
+    left: -35px;
     border-radius: 50%;
-    border: 5px solid #c5c5c5;
+    border: 4px solid #c5c5c5;
 }
 
 .catalog__perforators_manufacturer label::after,
 .catalog__perforators_power label::after {
     position: absolute;
-    top: 0px;
-    left: -15px;
+    top: 13px;
+    left: -18px;
     z-index: 1;
     width: 0px;
     height: 0px;
@@ -1517,10 +1520,10 @@ li.active a {
 }
 
 .catalog__perforators_manufacturer input[type="checkbox"]:checked ~ label::after {
-    top: -8px;
-    left: -34px;
-    width: 22px;
-    height: 9px;
+    top: -5px;
+    left: -29px;
+    width: 20px;
+    height: 11px;
     box-shadow:
         0px -1px white,
         4px -5px #c5c5c5,
@@ -1530,10 +1533,10 @@ li.active a {
 }
 
 .catalog__perforators_power input[type="radio"]:checked ~ label::after {
-    top: 4px;
-    left: -31px;
-    width: 10px;
-    height: 10px;
+    top: 6px;
+    left: -26.5px;
+    width: 9px;
+    height: 9px;
     background-color: #c5c5c5;
     opacity: 1;
 }
