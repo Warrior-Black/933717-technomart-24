@@ -1308,7 +1308,7 @@ li.active a {
     text-transform: uppercase;
     font-size: 13px;
     line-height: 18px;
-    margin: 25px 0;
+    margin: 20.5px 0 20px;
 }
 
 .catalog__breadcrumbs li:not(:first-of-type) a {
@@ -1325,16 +1325,16 @@ li.active a {
     width: 14px;
     height: 12px;
     background-image: url(img/general/icon/home.svg);
-    left: 0;
-    top: 2px
+    left: -2px;
+    top: 2.5px
 }
 
 .catalog__breadcrumbs li:nth-of-type(2) {
-    margin-left: 55px;
+    margin-left: 53.5px;
 }
 
 .catalog__breadcrumbs li:nth-of-type(3) {
-    margin-left: 39px;
+    margin-left: 41px;
 }
 
 .catalog__breadcrumbs li:nth-of-type(4) {
@@ -1347,19 +1347,19 @@ li.active a {
     width: 8px;
     height: 12px;
     background-image: url(img/general/icon/right-small.svg);
-    top: 2px;
+    top: 2.5px;
 }
 
 .catalog__breadcrumbs li:nth-of-type(2)::before {
-    left: 29px
+    left: 28px
 }
 
 .catalog__breadcrumbs li:nth-of-type(3)::before {
-    left: 120px
+    left: 123px
 }
 
 .catalog__breadcrumbs li:nth-of-type(4)::before {
-    left: 240px
+    left: 243px
 }
 
 .catalog__perforators {
@@ -1369,6 +1369,7 @@ li.active a {
 
 .catalog__perforators_title {
     margin: 0;
+    font-weight: 400;
     text-transform: uppercase;
     font-size: 30px;
     line-height: 30px;
@@ -1376,8 +1377,8 @@ li.active a {
     background-color: #f2f6f8;
     width: 940px;
     height: 89px;
-    padding-top: 32px;
-    padding-left: 30px;
+    padding-top: 30px;
+    padding-left: 28px;
     margin-bottom: 20px
 }
 
@@ -1400,16 +1401,17 @@ li.active a {
     background-color: #f7f3ec;
     width: 220px;
     height: 38px;
-    padding-top: 14px;
-    padding-left: 18px;
+    padding-top: 10px;
+    padding-left: 18.5px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 11px;
 }
 
 .catalog__perforators_filter h3 {
     margin: 0;
     font-size: 17px;
     line-height: 30px;
+    margin-left: -0.3px
 }
 
 .catalog__perforators_price input {
@@ -1422,7 +1424,8 @@ li.active a {
 
 .catalog__perforators_price input[type="range"] {
     width: 220px;
-    height: 80px;
+    height: 99.5px;
+
 }
 
 .catalog__perforators_price-value {
@@ -1444,7 +1447,7 @@ li.active a {
 }
 
 .catalog__perforators_manufacturer {
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 27px;
     border: 1px solid #c5c5c5;
     border-left: none;
@@ -1462,7 +1465,8 @@ li.active a {
 
 .catalog__perforators_manufacturer li,
 .catalog__perforators_power li {
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    font-size: 15px
 }
 
 .catalog__perforators_manufacturer label,
@@ -1626,6 +1630,7 @@ li.active a {
 .catalog__about h2 {
     margin: 0;
     font-size: 30px;
+    font-weight: 400;
     line-height: 30px;
     text-transform: uppercase;
     padding-top: 67px;
