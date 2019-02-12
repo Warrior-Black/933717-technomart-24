@@ -26,6 +26,11 @@ a { text-decoration: none; }
   overflow: hidden;
 }
 
+.container {
+    margin: 0 auto;
+    width: 960px;
+    padding: 0 10px;
+}
 
 
 /*---------------------------------HEADER-----------------------------------*/
@@ -903,17 +908,18 @@ main .btn {
     margin: auto;
 }
 
-.main-middle h2 {
+.main-middle_container h2 {
     margin: 0;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
     margin-top: 65px;
     margin-bottom: 25px;
+    font-weight: 400;
     /*letter-spacing: -0.8px*/
 }
 
-.main-middle  p {
+.main-middle_container p {
     margin: 0;
     font-size: 13px;
     line-height: 24px;
