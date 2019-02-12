@@ -45,8 +45,8 @@ a { text-decoration: none; }
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
     width: 940px;
+    height: 42px;
     margin: auto;
     font-size: 17px;
     line-height: 18px;
@@ -59,7 +59,6 @@ a { text-decoration: none; }
     justify-content: center;
     align-items: center;
     padding-top: 2px;
-    position: absolute;
     left: 0;
     width: 220px;
     height: 52px;
@@ -78,7 +77,7 @@ a { text-decoration: none; }
     opacity: 0;
     width: 220px;
     height: 42px;
-    margin-right: 44px;
+    margin-right: 47px;
     z-index: 1;
     transition: 0.5s
 }
