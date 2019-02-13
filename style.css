@@ -51,7 +51,6 @@ a { text-decoration: none; }
     justify-content: flex-end;
     align-items: center;
     width: 940px;
-    height: 42px;
     margin: auto;
     font-size: 17px;
     line-height: 18px;
@@ -66,9 +65,20 @@ a { text-decoration: none; }
     padding-top: 2px;
     left: 0;
     width: 220px;
-    height: 52px;
+    height: 42px;
     background-color: #ee3643;
-    box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24)
+    box-shadow: 0 5px 0 0 #b62430
+}
+
+.main-header__top .main-header__logo:hover,
+.main-header__top .main-header__logo:focus {
+    background-color: #ca2c37;
+    box-shadow: #9b1b25
+}
+
+.main-header__top .main-header__logo:active {
+    background-color: #ba2732;
+    box-shadow: #8f1821;
 }
 
 .main-header__top a {
@@ -83,42 +93,47 @@ a { text-decoration: none; }
     width: 220px;
     height: 42px;
     margin-right: 47px;
+    margin-left: auto;
+    padding-left: 47.5px;
+    padding-bottom: 2.5px;
     z-index: 1;
     transition: 0.5s
 }
 
 .main-header__top label {
     position: relative;
-    left: 49px;
-    z-index: 0
-}
-
-.main-header__top label {
-    position: relative;
-    left: 49px;
+    left: -224px;
     z-index: 0
 }
 
 .main-header__top input:focus {
-    position: absolute;
-    top:0;
-    left: 265px;
     opacity: 1;
+    border: none;
+    outline: none
 }
 
-.main-header__top input:focus ~ .main-header__top label {
+.main-header__top input:focus + label {
     color: transparent
 }
 
 .main-header__top label::before {
     position: absolute;
-    top: 1px;
+    top: 1.5px;
     left: -31px;
     width: 17px;
     height: 17px;
     content: "";
-    background-color: #293449;
+    opacity: 0.3;
     background-image: url(img/general/icon/search.svg);
+    transition: 0.5s
+}
+
+.main-header__top input:hover + label::before {
+    opacity: 1;
+}
+
+.main-header__top input:focus + label::before {
+    opacity: 1
 }
 
 .main-header__top_bookmarks {
