@@ -88,6 +88,13 @@ a { text-decoration: none; }
     background-color: #293449;
 }
 
+.main-header__top_container svg {
+    position: absolute;
+    top: 12px;
+    left: 310px;
+    opacity: 0.3
+}
+
 .main-header__top input {
     opacity: 0;
     width: 220px;
@@ -97,13 +104,17 @@ a { text-decoration: none; }
     padding-left: 47.5px;
     padding-bottom: 2.5px;
     z-index: 1;
-    transition: 0.5s
+    transition: 0.3s
 }
 
 .main-header__top label {
     position: relative;
     left: -224px;
     z-index: 0
+}
+
+.main-header__top input:hover {
+    background-color: #212a3a
 }
 
 .main-header__top input:focus {
@@ -116,7 +127,17 @@ a { text-decoration: none; }
     color: transparent
 }
 
-.main-header__top label::before {
+.main-header__top input:hover ~ svg {
+    opacity: 1;
+}
+
+.main-header__top input:focus ~ svg,
+.main-header__top input:focus ~ svg path {
+    opacity: 1;
+    fill: #ee3643
+}
+
+/*.main-header__top label::before {
     position: absolute;
     top: 1.5px;
     left: -31px;
@@ -126,15 +147,15 @@ a { text-decoration: none; }
     opacity: 0.3;
     background-image: url(img/general/icon/search.svg);
     transition: 0.5s
-}
+}*/
 
-.main-header__top input:hover + label::before {
+/*.main-header__top input:hover + label::before {
     opacity: 1;
 }
 
 .main-header__top input:focus + label::before {
     opacity: 1
-}
+}*/
 
 .main-header__top_bookmarks {
     position: relative;
