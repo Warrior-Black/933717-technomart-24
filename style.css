@@ -89,13 +89,15 @@ a { text-decoration: none; }
 }
 
 .main-header__top_container svg {
+    fill: #ffffff;
     position: absolute;
     top: 12px;
-    left: 247px;
+    left: 16px;
     opacity: 0.3
 }
 
 .main-header__top form {
+    position: relative;
     width: 269px;
 }
 
@@ -165,6 +167,9 @@ input[type="search"]:hover ~ svg {
     opacity: 1;
 }
 
+input[type="search"]:active ~ svg {
+    opacity: 0.5;
+}
 
 input[type="search"]:focus ~ svg {
     opacity: 1;
@@ -324,7 +329,12 @@ input[type="search"]:focus ~ svg {
     text-align: center;
 }
 
-.main-header__section_authorized .main-header__section_profile {
+.main-header__section_not-authorized,
+.main-header__section_authorized {
+    list-style: none;
+}
+
+.main-header__section_authorized .main-header__section_name {
     font-size: 21px;
     line-height: 21px;
     color: #000000;
@@ -339,41 +349,43 @@ input[type="search"]:focus ~ svg {
 
 .main-header__section_authorized li:first-of-type {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     width: 300px;
     height: 45px;
 }
 
-.main-header__section_profile {
-    display: flex;
-    margin-left: 14px;
-    margin-bottom: 2px;
-    vertical-align: top
+.main-header__section_name {
+    padding: 12px 29px 13px 47px;
 }
 
-.main-header__section_profile span {
-    display: inline-block;
-    margin-right: 13px;
-    margin-top: 2px;
-    width: 20px;
-    height: 18px;
-    background-image: url(img/general/icon/user.svg);
-    opacity: 0.3
+.main-header__section_authorized svg {
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    fill: #c5c5c5
 }
 
 .main-header__section_exit-profile {
-    width: 20px;
-    height: 17px;
-    margin-right: 11px;
-    margin-left: auto;
-    background-image: url(img/general/icon/logout.svg);
-    opacity: 0.3
+    display: block;
+    width: 38px;
+    padding: 14px 0 0 8px
 }
 
-.main-header__section_authorized li:first-of-type:hover span,
-.main-header__section_authorized li:first-of-type:hover .main-header__section_exit-profile {
-    opacity: 1
+.main-header__section_exit-profile svg {
+    position: static;
+    fill: #c5c5c5;
+}
+
+.main-header__section_name:hover .login,
+.main-header__section_name:focus .login,
+.main-header__section_exit-profile:hover .logout,
+.main-header__section_exit-profile:focus svg {
+    fill: #32425c
+}
+
+.main-header__section_profile:active svg,
+.main-header__section_exit-profile:active svg {
+    fill: #c5c5c5
 }
 
 
@@ -419,13 +431,9 @@ input[type="search"]:focus ~ svg {
     opacity: 0.3
 }
 
-.main-header__section_not-authorized,
-.main-header__section_authorized {
-    list-style: none;
-}
-
 .main-header__section_not-authorized {
     display: flex;
+    position: relative;
     margin: 0;
     padding: 0;
     height: 45px
@@ -438,44 +446,47 @@ input[type="search"]:focus ~ svg {
     margin-left: 10px;
 }
 
-.main-header__section_not-authorized li:first-of-type {
-    width: 121px;
-    padding-right: 26px
-}
-
-.main-header__section_not-authorized li:last-of-type {
-    width: 150px;
-    padding-right: 24px
-}
-
 .main-header__section_not-authorized .btn {
     font-size: 21px;
     line-height: 21px;
     color: #000000
 }
 
-.main-header__section_not-authorized li:hover a,
-.main-header__section_not-authorized li:focus a {
+.main-header__section_not-authorized svg {
+    position: absolute;
+    left: 24px;
+    fill: #c5c5c5
+}
+
+.main-header__section_btn-enter:hover ~ svg,
+.main-header__section_btn-enter:focus ~ svg  {
+    fill: #32425C
+}
+
+.main-header__section_btn-enter:active ~ svg {
+    fill: #c5c5c5
+}
+
+.main-header__section_btn-enter {
+    padding: 14px 26px 15px 47px
+}
+
+.main-header__section_btn-registration {
+    padding: 12px 24px 13px 24px
+}
+
+.main-header__section_not-authorized .btn:hover,
+.main-header__section_not-authorized .btn:focus {
     color: #ee3643
 }
 
-.main-header__section_not-authorized li:active a {
+.main-header__section_not-authorized .btn:active {
     color: #000000;
     opacity: 0.3
 }
 
 .main-header__section_btn-enter {
     position: relative;
-}
-
-.main-header__section_btn-enter::before {
-    position: absolute;
-    content: "";
-    width: 20px;
-    height: 17px;
-    left: -32px;
-    top: 2px;
-    background-image: url(img/general/icon/login.svg);
 }
 
 .main-header__section .hidden {
@@ -504,50 +515,47 @@ input[type="search"]:focus ~ svg {
     padding-bottom: 2px;
 }
 
-.main-header__nav_items li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.main-header__nav_item a {
+    display: block;
     height: 58px;
-    padding-right: 10px;
-    padding-left: 52px
+    padding: 20px 10px 28px 52px;
 }
 
-.main-header__nav_items li:nth-of-type(1) {
-    padding: 0 32px 0 52px;
+.main-header__nav_item:nth-of-type(1) a {
+    padding: 20px 34px 28px 52px;
 }
 
-.main-header__nav_items li:nth-of-type(2) {
-    padding: 0 29px 0 32px;
+.main-header__nav_item:nth-of-type(2) a {
+    padding: 20px 29px 28px 30px;
 }
 
-.main-header__nav_items li:nth-of-type(3) {
-    padding: 0 30px 0 29px;
+.main-header__nav_item:nth-of-type(3) a {
+    padding: 20px 30px 28px 29px;
 }
 
-.main-header__nav_items li:nth-of-type(4) {
-    padding: 0 29px 0 30px;
+.main-header__nav_item:nth-of-type(4) a {
+    padding: 20px 29px 28px 30px;
 }
 
-.main-header__nav_items li:nth-of-type(5) {
-    padding: 0 31px 0 30px;
+.main-header__nav_item:nth-of-type(5) a {
+    padding: 20px 31px 28px 30px;
     /*letter-spacing: 0.005em*/
 }
 
-.main-header__nav_items li:nth-of-type(6) {
-    padding: 0 32px 0 31px;
+.main-header__nav_item:nth-of-type(6) a {
+    padding: 20px 32px 28px 31px;
 }
 
-.main-header__nav_items li:nth-of-type(7) {
-    padding: 0 53px 0 31px;
+.main-header__nav_item:nth-of-type(7) a {
+    padding: 20px 53px 28px 31px;
 }
 
-.main-header__nav_items li:hover,
+.main-header__nav_items a:hover,
 .main-header__nav_items a:focus {
     background-color: #293449;
 }
 
-.main-header__nav_items li:active {
+.main-header__nav_items a:active {
     background-color: #1d2739
 }
 
