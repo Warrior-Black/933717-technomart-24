@@ -579,10 +579,17 @@ main .btn {
     line-height: 18px
 }
 
+main .btn:hover,
+main .btn:focus {
+    background-color: #ca2c37
+}
+
+main .btn:active {
+    background-color: #ba2732
+}
 
 
-
-/*OFFERS*/
+/*--------------------OFFERS--------------------------*/
 .offers {
     width: 940px;
     margin: auto;
@@ -689,21 +696,46 @@ main .btn {
     background-position: 197px 33px
 }
 
+.offers__slides {
+    margin: 0;
+    padding: 0;
+}
+
 .offers__drills,
 .offers__perforators {
     background-color: #000000;
+    background-image: url(img/index/drils.jpg);
+}
+
+.offers__slides li {
+    padding-left: 24px
+}
+
+.offers__slides h3 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 23px 0 1.5px 0;
+}
+
+.offers__slides span {
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .offers__slides a {
     width: 195px;
     height: 38px;
+    margin-top: 121.5px;
+    margin-left: 1px;
+    padding-left: 2px;
     background-color: #ee3643;
 }
 
-.offers__drills h3,
-.offers__perforators h3 {
-    margin: 0;
-    text-transform: uppercase;
+
+.offers__slides .hidden {
+    display: none;
 }
 
 .offers__equipment {
@@ -727,7 +759,9 @@ main .btn {
     background-position: 191px 32px
 }
 
-/*POPULAR*/
+
+
+/*--------------------POPULAR--------------------------*/
 .popular-product {
     display: flex;
     flex-direction: column;
@@ -772,14 +806,16 @@ main .btn {
     align-items: center;
     position: relative;
     border: 1px solid #eaeaea;
-    width: 220px
+    width: 220px;
 }
 
-.popular-product__card:hover {
+.popular-product__card:hover,
+.popular-product__card:focus {
     box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.popular-product__card:hover img {
+.popular-product__card:hover img,
+.popular-product__card:focus img {
     visibility: hidden;
 }
 
@@ -795,7 +831,8 @@ main .btn {
     visibility: hidden;
 }
 
-.popular-product__card:hover .popular-product__card_btn-hover {
+.popular-product__card:hover .popular-product__card_btn-hover,
+.popular-product__card:focus .popular-product__card_btn-hover {
     visibility: visible;
 }
 
@@ -878,6 +915,7 @@ main .btn {
 .popular-product__card_btn-hover:last-of-type:hover,
 .popular-product__card_btn-hover:last-of-type:focus {
     border-color: #32425c;
+    background-color: #ffffff;
 }
 
 .popular-product__card_btn-hover:last-of-type:active {
@@ -956,47 +994,53 @@ main .btn {
     margin-bottom: 85px;
 }
 
-.popular-manufacturer__list li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.popular-manufacturer__list a {
+    display: block;
     border: 1px solid #eaeaea;
     width: 220px;
     height: 145px;
     margin-top: 20px;
 }
 
-.popular-manufacturer__list li:nth-of-type(1) {
-    padding-top: 3px;
+.popular-manufacturer__list a:hover,
+.popular-manufacturer__list a:focus {
+    box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.popular-manufacturer__list li:nth-of-type(2) {
-    padding-right: 1px;
+.popular-manufacturer__list a:active {
+    box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
-.popular-manufacturer__list li:nth-of-type(4) {
-    padding-bottom: 10px;
-    padding-right: 2px
+.popular-manufacturer__list_item:nth-of-type(1) a {
+    padding: 53px 47px 55px 47px;
 }
 
-.popular-manufacturer__list li:nth-of-type(5) {
-    padding-top: 7px;
-    padding-left: 5px
+.popular-manufacturer__list_item:nth-of-type(2) a {
+    padding: 50px 49px 55px 48px;
 }
 
-.popular-manufacturer__list li:nth-of-type(6) {
-    padding-top: 3px;
-    padding-right: 3px
+.popular-manufacturer__list_item:nth-of-type(3) a {
+    padding: 48px 37px 53px
 }
 
-.popular-manufacturer__list li:nth-of-type(7) {
-    padding-top: 2px;
-    padding-left: 1px
+.popular-manufacturer__list_item:nth-of-type(4) a {
+    padding: 21px 11px 36px 9px
 }
 
-.popular-manufacturer__list li:nth-of-type(8) {
-    padding-bottom: 3px;
-    padding-left: 4px
+.popular-manufacturer__list_item:nth-of-type(5) a {
+    padding: 58px 23px 56px 28px
+}
+
+.popular-manufacturer__list_item:nth-of-type(6) a {
+    padding: 35px 51px 37px 48px
+}
+
+.popular-manufacturer__list_item:nth-of-type(7) a {
+    padding: 23px 34px 26px 35px
+}
+
+.popular-manufacturer__list_item:nth-of-type(8) a {
+    padding: 34px 6px 42px 10px
 }
 
 
@@ -1052,13 +1096,9 @@ main .btn {
 }
 
 .main-middle__list li {
-    display: flex;
-    align-items: center;
     width: 240px;
     height: 61px;
-    padding-left: 22.5px;
     margin-bottom: 1px;
-    padding-bottom: 2px;
     background-color: #32425c;
     box-shadow:
     0 1px 0 0 #293449,
@@ -1071,7 +1111,7 @@ main .btn {
     /*letter-spacing: 0.6px;*/
 }
 
-.main-middle__list li.active {
+.main-middle__list li:active {
     background-color: #ffffff;
     box-shadow:
     0 1px 0 0 #ffffff,
