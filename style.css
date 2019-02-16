@@ -793,7 +793,7 @@ main .btn:active {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin: 20px 0 21px;
+    margin-bottom: 21px;
     font-family: "PT Sans", "Arial", sans-serif;
     font-weight: bold;
     text-align: center;
@@ -807,6 +807,7 @@ main .btn:active {
     position: relative;
     border: 1px solid #eaeaea;
     width: 220px;
+    margin-top: 20px
 }
 
 .popular-product__card:hover,
@@ -1105,36 +1106,50 @@ main .btn:active {
     inset 0 1px 0 0 #405069;
 }
 
-.main-middle__list a {
-    font-size: 21px;
-    line-height: 30px;
-    /*letter-spacing: 0.6px;*/
+.main-middle__list_item {
+    display: block;
 }
 
-.main-middle__list li:active {
-    background-color: #ffffff;
-    box-shadow:
-    0 1px 0 0 #ffffff,
-    inset 0 1px 0 0 #ffffff;
+.main-middle__list_item:nth-of-type(1) a {
+    display: block;
+    padding: 14.5px 140px 21px 22px
 }
 
-li.active a {
-    color: #32425c;
+.main-middle__list_item:nth-of-type(2) a {
+    display: block;
+    padding: 14.5px 140px 20px 22px
+}
+
+.main-middle__list_item:nth-of-type(3) a {
+    display: block;
+    padding: 14.5px 157px 20px 22px
 }
 
 .main-middle__list a {
     color: #ffffff;
     font-size: 21px;
     line-height: 30px;
-    vertical-align: middle;
+    /*letter-spacing: 0.6px;*/
+}
+
+.main-middle__list_item:hover a {
+    background-color: #293449
+}
+
+.main-middle__list_item a:focus,
+.main-middle__list_item a:active {
+    background-color: #ffffff;
+    box-shadow:
+    0 1px 0 0 #ffffff,
+    inset 0 1px 0 0 #ffffff;
+    color: #32425c;
 }
 
 .main-middle__list::after {
     position: absolute;
     right: 0;
-    top: -25%;
+    top: -46px;
     content: "";
-    display: block;
     width: 10px;
     height: 279px;
     background-image: url(img/index/menu-border.png);
@@ -1359,6 +1374,18 @@ li.active a {
     color: #ffd180;
     margin-left: 60px
 }
+.main-footer__cite-nav a:hover,
+.main-footer__cite-nav a:focus,
+.main-footer__offers-nav a:hover,
+.main-footer__offers-nav a:focus {
+    text-decoration: underline;
+}
+
+.main-footer__cite-nav a:active,
+.main-footer__offers-nav a:active {
+    opacity: 0.5;
+    text-decoration: none;
+}
 
 .main-footer__bottom_container {
     background-color: #293449
@@ -1384,6 +1411,12 @@ li.active a {
     background-color: #212a3a;
     margin-right: 3px;
     margin-bottom: 0px
+}
+
+.main-footer__social li:hover,
+.main-footer__social li:focus,
+.main-footer__social li:active {
+    background-color: #ee3643
 }
 
 .main-footer__social li:nth-of-type(1) {
@@ -1432,6 +1465,16 @@ li.active a {
     font-size: 16px;
     line-height: 18px;
     color: #ffd180
+}
+
+.main-footer__bottom a:hover,
+.main-footer__bottom a:focus {
+    text-decoration: underline;
+}
+
+.main-footer__bottom a:active {
+    text-decoration: none;
+    color: #ee3643
 }
 
 
@@ -1641,6 +1684,7 @@ li.active a {
     background-color: #ffffff;
     border-radius: 3px;
     content: "";
+    transition: 0.2s ease-in;
 }
 
 .catalog__perforators_power label::before {
@@ -1667,12 +1711,17 @@ li.active a {
 }
 
 .catalog__perforators_power label::after {
-    top: 7px;
-    left: -30px;
+    top: 10px;
+    left: -25px;
     border-radius: 50%
 }
 
-.catalog__perforators_manufacturer input[type="checkbox"]:checked ~ label::after {
+input[type="checkbox"],
+input[type="radio"] {
+    outline: none
+}
+
+input[type="checkbox"]:checked ~ label::after {
     top: -5px;
     left: -29px;
     width: 20px;
@@ -1685,13 +1734,63 @@ li.active a {
 
 }
 
-.catalog__perforators_power input[type="radio"]:checked ~ label::after {
-    top: 6px;
-    left: -26.5px;
+input[type="radio"]:checked ~ label::after {
+    top: 5.5px;
+    left: -27px;
     width: 9px;
     height: 9px;
     background-color: #c5c5c5;
     opacity: 1;
+}
+
+input[type="checkbox"]:not(.disabled):hover ~ label:before,
+input[type="radio"]:not(.disabled):hover ~ label:before {
+    border-color: #b5b5b5;
+}
+
+input[type="checkbox"]:focus ~ label:before,
+input[type="radio"]:focus ~ label:before {
+    border-color: #b5b5b5;
+    box-shadow: 0 0 1px 0 blue
+}
+
+input[type="checkbox"]:not(.disabled):checked:hover ~ label::after,
+input[type="checkbox"]:checked:focus ~ label::after {
+    box-shadow:
+        0px -1px white,
+        4px -5px #b5b5b5,
+        0px -6px white;
+}
+
+input[type="radio"]:not(.disabled):checked:hover ~ label::after,
+input[type="radio"]:checked:focus ~ label::after {
+    background-color: #b5b5b5
+}
+
+input[type="checkbox"].disabled ~ label::before,
+input[type="radio"].disabled ~ label::before {
+    border-color: rgba(181, 181, 181, 0.3);
+}
+
+input[type="checkbox"].disabled ~ label::after {
+    box-shadow:
+        0px -1px white,
+        4px -5px rgba(181, 181, 181, 0.3),
+        0px -6px white;
+}
+
+input[type="radio"].disabled ~ label::after {
+    background-color: rgba(181, 181, 181, 0.3)
+}
+
+.catalog__perforators_filter button {
+    font-size: 13px;
+    line-height: 18px;
+    background-color: #ffffff;
+    padding: 10px 40px 9px 37.5px;
+    margin-top: 57px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px
 }
 
 .catalog__perforators_sort-container {
@@ -1702,7 +1801,7 @@ li.active a {
 .catalog__perforators_sorting {
     display: flex;
     text-transform: uppercase;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     font-size: 13px;
     line-height: 18px;
@@ -1711,27 +1810,51 @@ li.active a {
     height: 38px
 }
 
+.catalog__perforators_sorting h2 {
+    margin-left: 18px;
+    margin-right: 141px
+}
+
+.catalog__perforators_sorting a:nth-of-type(1) {
+    margin-right: 70px
+}
+
+.catalog__perforators_sorting a:nth-of-type(2) {
+    margin-right: 65px
+}
+.catalog__perforators_sorting a:nth-of-type(3) {
+    margin-right: 35px
+}
+
 .catalog__perforators_sorting a {
     color: #000000;
     opacity: 0.3;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: #ee3643;
+    border-bottom: 1px dotted #ee3643;
+}
+
+.catalog__perforators_sorting a:hover {
+    opacity: 1;
+    border-bottom: 1px solid #ee3643;
 }
 
 .catalog__perforators_sorting .sorting-selected {
-    text-decoration: none;
+    border: none;
     color: #ee3643;
     opacity: 1
+}
+
+.catalog__perforators_sorting .sorting-selected:hover {
+    border: none;
 }
 
 .catalog__perforators_products ul {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 52px
 }
 
 .catalog__paginator {
-    margin-left: 370px;
+    margin-left: 240px;
     margin-bottom: 61px
 }
 
@@ -1768,6 +1891,7 @@ li.active a {
 
 .catalog__paginator_page.selected {
     background-color: #ee3643;
+    border: none
 }
 
 .catalog__paginator_page.selected a {
@@ -1789,7 +1913,7 @@ li.active a {
     font-weight: 400;
     line-height: 30px;
     text-transform: uppercase;
-    padding-top: 67px;
+    padding-top: 64px;
     margin-bottom: 30px
 }
 
