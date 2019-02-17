@@ -370,41 +370,46 @@
                 </div>
             </div>
         </footer>
-        <section  class="modal-window__map">
+        <section  class="modal-window__map modal-window">
             <h2 class="visually-hidden">Информационное окно с увеличенной картой</h2>
             <a href="https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9387165,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474" aria-label="Наша компания на картах Гугл">
                 <img src="img/index/map.jpg" alt="город Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
             </a>
             <button class="close-window" aria-label="Закрыть карту"></button>
         </section>
-        <section  class="modal-window__form_mail">
+        <section  class="modal-window__form_mail modal-window">
             <h2 class="visually-hidden">Отправка письма в компанию Техномарт</h2>
             <form action="https://echo.htmlacademy.ru" method="post">
-                <p>
-                    <label for="modal-window__form_mail_name">Ваше имя:</label>
-                    <input type="text" name="name" id="modal-window__form_mail_name" placeholder="Имя Фамилия" autofocus/>
-                </p>
-                <p>
-                    <label for="modal-window__form_mail_email">Ваше e-mail:</label>
-                    <input type="email" name="email" id="modal-window__form_mail_email" placeholder="email@example.com" />
-                </p>
-                <p>
-                    <label for="modal-window__form_mail_text">Текст письма:</label>
-                    <textarea name="mail" id="modal-window__form_mail_text" placeholder="В свободной форме"></textarea>
-                </p>
-                <button type="submit" class="btn modal-window__form_mail_btn">отправить</button>
+                <div class="modal-window__form_container">
+                    <p>
+                        <label for="modal-window__form_mail_name">Ваше имя:</label>
+                        <input type="text" name="name" id="modal-window__form_mail_name" placeholder="Имя Фамилия" autofocus/>
+                    </p>
+                    <p>
+                        <label for="modal-window__form_mail_email">Ваше e-mail:</label>
+                        <input type="email" name="email" id="modal-window__form_mail_email" placeholder="email@example.com" />
+                    </p>
+                    <p>
+                        <label for="modal-window__form_mail_text">Текст письма:</label>
+                        <textarea name="mail" id="modal-window__form_mail_text" placeholder="В свободной форме"></textarea>
+                    </p>
+                </div>
+                <div class="modal-window__form_btn-container">
+                    <button type="submit" class="btn modal-window__form_mail_btn">отправить</button>
+                </div>
             </form>
             <button class="close-window" aria-label="Закрыть "></button>
         </section>
-        <section  class="modal-window__basket">
+        <section  class="modal-window__basket modal-window">
             <h2 class="visually-hidden">Информационное окно добавления товара в корзину</h2>
             <P>
-                <span class="modal-window__basket_ok"></span>
                 Товар добавлен в корзину!
             </P>
-            <a class="btn modal-window__basket_btn-place-an-order" href="#">оформить заказ</a>
-            <button class="btn modal-window__basket_btn-continue">продолжить покупки</button>
-            <button class="close-window" aria-label="Закрыть "></button>
+            <div class="modal-window__basket_btn-container">
+                <a class="btn modal-window__basket_btn-place-an-order" href="#">оформить заказ</a>
+                <button class="btn modal-window__basket_btn-continue">продолжить покупки</button>
+                <button class="close-window" aria-label="Закрыть "></button>
+            </div>
         </section>
     </body>
 </html>

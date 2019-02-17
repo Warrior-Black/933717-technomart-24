@@ -105,16 +105,16 @@
             <div class="container">
                 <div class="catalog">
                     <ul class="catalog__breadcrumbs">
-                        <li>
-                            <a href="index.html" class="visually-hidden">Главная</a>
+                        <li class="catalog__breadcrumbs_item">
+                            <a href="index.html" aria-label="Переход на главную страницу"></a>
                         </li>
-                        <li>
+                        <li class="catalog__breadcrumbs_item">
                             <a href="catalog.html">Каталог</a>
                         </li>
-                        <li>
+                        <li class="catalog__breadcrumbs_item">
                             <a href="tools.html">Инструмент</a>
                         </li>
-                        <li class="breadcrumbs-current">
+                        <li class="catalog__breadcrumbs_item breadcrumbs-current">
                             Перфораторы
                         </li>
                     </ul>
@@ -176,11 +176,11 @@
                             <div class="catalog__perforators_sort-container">
                                 <section class="catalog__perforators_sorting">
                                     <h2>сортировка:</h2>
-                                    <a href="#" class="sorting-selected">по цене</a>
-                                    <a href="#" class="sorting">по типу</a>
-                                    <a href="#" class="sorting">по функционалу</a>
-                                    <a href="#" class="sorting">1</a>
-                                    <a href="#" class="sorting">2</a>
+                                    <a href="#" class="selected">по цене</a>
+                                    <a href="#" class="">по типу</a>
+                                    <a href="#" class="">по функционалу</a>
+                                    <a href="#" class="sorting sorting-active" aria-label="Сортировка по возрастанию"></a>
+                                    <a href="#" class="sorting" aria-label="Сортировка по убыванию"></a>
                                 </section>
                                 <section class="catalog__perforators_products">
                                     <h2 class="visually-hidden">товары:</h2>
@@ -269,7 +269,7 @@
                                 <a href="#" class="">предыдущая</a>
                             </li>
                             <li class="catalog__paginator_page selected">
-                                <a href="#" class="">1</a>
+                                <a class="selected" href="#" class="">1</a>
                             </li>
                             <li class="catalog__paginator_page">
                                 <a href="#" class="">2</a>
