@@ -856,7 +856,10 @@ main .btn:active {
     border: inset 1px solid #eaeaea;
 }
 
-.popular-product .popular-product__card:nth-of-type(4)::before {
+.popular-product .popular-product__card:nth-of-type(4)::before,
+.catalog__perforators_products .popular-product__card:nth-of-type(3)::before,
+.catalog__perforators_products .popular-product__card:nth-of-type(5)::before,
+.catalog__perforators_products .popular-product__card:nth-of-type(7)::before {
     position: absolute;
     top: -1px;
     right: -1px;
