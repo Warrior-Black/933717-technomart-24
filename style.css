@@ -1843,7 +1843,8 @@ input[type="radio"].disabled ~ label::after {
     padding: 10px 40px 9px 37.5px;
     margin-top: 57px;
     border: 1px solid #c5c5c5;
-    border-radius: 3px
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 .catalog__perforators_filter button:hover,
