@@ -822,7 +822,14 @@ main .btn:active {
     position: relative;
     border: 1px solid #eaeaea;
     width: 220px;
-    margin-top: 20px
+    margin-top: 20px;
+    padding-top: 44px
+}
+
+.popular-product__card img {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
 }
 
 .popular-product__card:hover,
@@ -831,25 +838,19 @@ main .btn:active {
 }
 
 .popular-product__card:hover img,
-.popular-product__card:focus img {
+.popular-product__card:focus img,
+.popular-product__card_btn-hover:focus ~ img {
     visibility: hidden;
 }
 
 .popular-product__cards a {
-    position: absolute;
+    position: relative;
     font-size: 14px;
     line-height: 18px;
     font-family: "Cuprum", Arial, sans-serif;
     font-weight: normal;
     letter-spacing: 0.55px;
-    margin-bottom: 1px;
     padding-top: 1px;
-    visibility: hidden;
-}
-
-.popular-product__card:hover .popular-product__card_btn-hover,
-.popular-product__card:focus .popular-product__card_btn-hover {
-    visibility: visible;
 }
 
 .popular-product__card img {
@@ -868,6 +869,7 @@ main .btn:active {
     height: 59px;
     background-image: url(img/general/new-flag.png);
     background-repeat: no-repeat;
+    z-index: 1
 }
 
 .popular-product__card h3 {
@@ -883,17 +885,18 @@ main .btn:active {
 }
 
 .popular-product__card_btn-hover:first-of-type {
-    top: 45px;
     width: 135px;
     color: #ffffff;
     background-color: #63a63e;
     box-shadow: inset 0 -3px 0 0 #367315;
     padding-left: 3px;
+    margin-bottom: 7px;
     letter-spacing: -0.01px
 }
 
 .popular-product__card_btn-hover:first-of-type::before {
     position: absolute;
+    top: 11px;
     left: 12px;
     content: "";
     width: 15px;
@@ -908,28 +911,23 @@ main .btn:active {
     background-color: #5fbb2d;
 }
 
+.popular-product__card_btn-hover:first-of-type:hover::before,
+.popular-product__card_btn-hover:first-of-type:focus::before,
+.popular-product__card_btn-hover:first-of-type:active::before  {
+    opacity: 1;
+}
+
 .popular-product__card_btn-hover:first-of-type:active {
     background-color: #518534;
 }
 
-/*.popular-product__card_btn-hover:first-of-type:hover
-.popular-product__card_btn-hover:first-of-type::before {
-    position: absolute;
-    left: 12px;
-    content: "";
-    width: 15px;
-    height: 15px;
-    background-image: url(img/general/icon/basket.svg);
-}*/
-
-
 .popular-product__card_btn-hover:last-of-type {
-    top: 90px;
     width: 135px;
     color: #32425c;
     background-color: #ffffff;
     border: 3px solid #63a63e;
     padding-left: 3px;
+    margin-bottom: 43px;
     letter-spacing: -0.01px
 }
 
