@@ -214,7 +214,11 @@ input[type="search"]:focus ~ svg {
 
 .main-header__top_basket {
     position: relative;
-    padding: 11px 31px 12px 50px;
+    padding: 12px 31px 12px 50px;
+}
+
+.main-header__top .fullbasket {
+    background-color: #ee3643
 }
 
 .main-header__top_basket:hover,
