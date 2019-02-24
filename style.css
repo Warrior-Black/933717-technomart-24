@@ -15,6 +15,11 @@ body {
 
 a { text-decoration: none; }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -60,10 +65,7 @@ a { text-decoration: none; }
 }
 
 .main-header__top .main-header__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2px;
+    padding: 13px 55px 16px;
     left: 0;
     width: 220px;
     height: 42px;
@@ -214,7 +216,11 @@ input[type="search"]:focus ~ svg {
 
 .main-header__top_basket {
     position: relative;
-    padding: 11px 31px 12px 50px;
+    padding: 12px 31px 12px 50px;
+}
+
+.main-header__top .fullbasket {
+    background-color: #ee3643
 }
 
 .main-header__top_basket:hover,
@@ -585,7 +591,8 @@ main .btn {
     width: 253px;
     min-height: 38px;
     font-size: 14px;
-    line-height: 18px
+    line-height: 18px;
+    cursor: pointer;
 }
 
 main .btn:hover,
@@ -804,11 +811,12 @@ main .btn:active {
 
 .popular-product__cards {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
     margin-bottom: 21px;
+    margin-left: -20px;
     font-family: "PT Sans", "Arial", sans-serif;
     font-weight: bold;
     text-align: center;
@@ -822,7 +830,14 @@ main .btn:active {
     position: relative;
     border: 1px solid #eaeaea;
     width: 220px;
-    margin-top: 20px
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-top: 44px
+}
+
+.popular-product__card img {
+    position: absolute;
+    top: 0;
 }
 
 .popular-product__card:hover,
@@ -831,25 +846,19 @@ main .btn:active {
 }
 
 .popular-product__card:hover img,
-.popular-product__card:focus img {
+.popular-product__card:focus img,
+.popular-product__card_btn-hover:focus ~ img {
     visibility: hidden;
 }
 
 .popular-product__cards a {
-    position: absolute;
+    position: relative;
     font-size: 14px;
     line-height: 18px;
     font-family: "Cuprum", Arial, sans-serif;
     font-weight: normal;
     letter-spacing: 0.55px;
-    margin-bottom: 1px;
     padding-top: 1px;
-    visibility: hidden;
-}
-
-.popular-product__card:hover .popular-product__card_btn-hover,
-.popular-product__card:focus .popular-product__card_btn-hover {
-    visibility: visible;
 }
 
 .popular-product__card img {
@@ -868,6 +877,7 @@ main .btn:active {
     height: 59px;
     background-image: url(img/general/new-flag.png);
     background-repeat: no-repeat;
+    z-index: 1
 }
 
 .popular-product__card h3 {
@@ -883,17 +893,18 @@ main .btn:active {
 }
 
 .popular-product__card_btn-hover:first-of-type {
-    top: 45px;
     width: 135px;
     color: #ffffff;
     background-color: #63a63e;
     box-shadow: inset 0 -3px 0 0 #367315;
     padding-left: 3px;
+    margin-bottom: 7px;
     letter-spacing: -0.01px
 }
 
 .popular-product__card_btn-hover:first-of-type::before {
     position: absolute;
+    top: 11px;
     left: 12px;
     content: "";
     width: 15px;
@@ -908,28 +919,23 @@ main .btn:active {
     background-color: #5fbb2d;
 }
 
+.popular-product__card_btn-hover:first-of-type:hover::before,
+.popular-product__card_btn-hover:first-of-type:focus::before,
+.popular-product__card_btn-hover:first-of-type:active::before  {
+    opacity: 1;
+}
+
 .popular-product__card_btn-hover:first-of-type:active {
     background-color: #518534;
 }
 
-/*.popular-product__card_btn-hover:first-of-type:hover
-.popular-product__card_btn-hover:first-of-type::before {
-    position: absolute;
-    left: 12px;
-    content: "";
-    width: 15px;
-    height: 15px;
-    background-image: url(img/general/icon/basket.svg);
-}*/
-
-
 .popular-product__card_btn-hover:last-of-type {
-    top: 90px;
     width: 135px;
     color: #32425c;
     background-color: #ffffff;
     border: 3px solid #63a63e;
     padding-left: 3px;
+    margin-bottom: 43px;
     letter-spacing: -0.01px
 }
 
@@ -2070,9 +2076,9 @@ input[type="radio"].disabled ~ label::after {
 
 .modal-window__form_mail {
     position: fixed;
-    top: 50%;
+    top: 48.9%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     width: 620px;
     height: 430px;
     margin: auto;
@@ -2080,6 +2086,7 @@ input[type="radio"].disabled ~ label::after {
                 0 -7px 0 0 #ee3643;
     z-index: 10;
     background-color: #ffffff;
+    transition: 0.5s
 }
 
 .modal-window__form_container,
@@ -2232,5 +2239,25 @@ input[type="radio"].disabled ~ label::after {
 }
 
 .modal-window {
+    animation: bounce 0.5s;
     display: none;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(10%) scale(0.5, 0.1);
+    background-color: #ee3643;
+  }
+  100% {
+    transform: translate(-50%) scale(1);
+  }
+}
+
+.modal-window-open {
+    display: block;
+    animation: bounce 0.3s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
