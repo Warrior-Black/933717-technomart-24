@@ -591,7 +591,8 @@ main .btn {
     width: 253px;
     min-height: 38px;
     font-size: 14px;
-    line-height: 18px
+    line-height: 18px;
+    cursor: pointer;
 }
 
 main .btn:hover,
@@ -2075,9 +2076,9 @@ input[type="radio"].disabled ~ label::after {
 
 .modal-window__form_mail {
     position: fixed;
-    top: 50%;
+    top: 48.9%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     width: 620px;
     height: 430px;
     margin: auto;
@@ -2085,6 +2086,7 @@ input[type="radio"].disabled ~ label::after {
                 0 -7px 0 0 #ee3643;
     z-index: 10;
     background-color: #ffffff;
+    transition: 0.5s
 }
 
 .modal-window__form_container,
@@ -2237,5 +2239,25 @@ input[type="radio"].disabled ~ label::after {
 }
 
 .modal-window {
+    animation: bounce 0.5s;
     display: none;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(10%) scale(0.5, 0.1);
+    background-color: #ee3643;
+  }
+  100% {
+    transform: translate(-50%) scale(1);
+  }
+}
+
+.modal-window-open {
+    display: block;
+    animation: bounce 0.3s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
 }
