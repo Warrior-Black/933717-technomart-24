@@ -2076,7 +2076,7 @@ input[type="radio"].disabled ~ label::after {
 
 .modal-window__form_mail {
     position: fixed;
-    top: 48.9%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%);
     width: 620px;
@@ -2246,7 +2246,7 @@ input[type="radio"].disabled ~ label::after {
 
 @keyframes bounce {
   0% {
-    transform: translateY(10%) scale(0.5, 0.1);
+    transform: translateY(60%) scale(0.5, 0.1);
     background-color: #ee3643;
   }
   100% {
