@@ -1169,12 +1169,13 @@ main .btn:active {
     letter-spacing: 0.6px;
 }
 
-.main-middle__list_item:hover a {
+.main-middle__list_item:hover:not(.selection) a {
     background-color: #293449
 }
 
 .main-middle__list_item a:focus,
-.main-middle__list_item a:active {
+.main-middle__list_item a:active,
+.selection a {
     background-color: #ffffff;
     box-shadow:
     0 1px 0 0 #ffffff,
@@ -1236,7 +1237,7 @@ main .btn:active {
     margin-top: 31px
 }
 
-.main-middle__tab:not(.active) {
+.main-middle__tab:not(.selection) {
     display: none;
 }
 

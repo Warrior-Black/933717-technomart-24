@@ -123,3 +123,52 @@ var bookmarks = function() {
     bookmarksIncrement ++;
     bookmarksCount.innerHTML = bookmarksIncrement;
 }
+
+/*оживление сервисов*/
+var delivery = document.querySelector(".main-middle__list main-middle__list_item:nth-of-type(1)");
+var deliveryTab = document.querySelector(".main-middle__tabs-container main-middle__tab:nth-of-type(1)");
+var warranty = document.querySelector(".main-middle__list main-middle__list_item:nth-of-type(2)");
+var warrantyTab = document.querySelector(".main-middle__tabs-container main-middle__tab:nth-of-type(2)");
+var credit = document.querySelector(".main-middle__list main-middle__list_item:nth-of-type(3)");
+var creditTab = document.querySelector(".main-middle__tabs-container main-middle__tab:nth-of-type(3)");
+var tab1 = function() {
+    evt.preventDefault();
+    delivery.classList.add("selection");
+    deliveryTab.classList.add("selection");
+    if (warranty.classList.contains("selection") && warrantyTab.classList.contains("selection")) {
+        warranty.classList.remove("selection");
+        warrantyTab.classList.remove("selection");
+    }
+    if (credit.classList.contains("selection") && credit.classList.contains("selection")) {
+        credit.classList.remove("selection");
+        creditTab.classList.remove("selection");
+    }
+}
+var tab2 = function() {
+    evt.preventDefault();
+    warranty.classList.add("selection");
+    warrantyTab.classList.add("selection");
+    if (delivery.classList.contains("selection") && deliveryTab.classList.contains("selection")) {
+        delivery.classList.remove("selection");
+        deliveryTab.classList.remove("selection");
+    }
+    deliveryTab.classList.remove("selection");
+    if (credit.classList.contains("selection") && creditTab.classList.contains("selection")) {
+        credit.classList.remove("selection");
+        creditTab.classList.remove("selection");
+    }
+}
+var tab3 = function() {
+    evt.preventDefault();
+    credit.classList.add("selection");
+    creditTab.classList.add("selection");
+    if (warranty.classList.contains("selection") && warrantyTab.classList.contains("selection")) {
+        warranty.classList.remove("selection");
+        warrantyTab.classList.remove("selection");
+    }
+    deliveryTab.classList.remove("selection");
+    if (delivery.classList.contains("selection") && deliveryTab.classList.contains("selection")) {
+        delivery.classList.remove("selection");
+        deliveryTab.classList.remove("selection");
+    }
+}
