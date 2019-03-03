@@ -181,7 +181,12 @@ input[type="search"]:focus ~ svg {
 
 .main-header__top_bookmarks {
     position: relative;
-    padding: 11px 27px 12px 44px;
+    padding: 11px 0px 12px 44px;
+}
+
+.main-header__top_bookmarks span {
+    display: inline-block;
+    width: 36px;
 }
 
 .main-header__top_bookmarks:hover,
@@ -216,7 +221,12 @@ input[type="search"]:focus ~ svg {
 
 .main-header__top_basket {
     position: relative;
-    padding: 12px 31px 12px 50px;
+    padding: 12px 0px 12px 50px;
+}
+
+.main-header__top_basket span {
+    display: inline-block;
+    width: 39px;
 }
 
 .main-header__top .fullbasket {
@@ -2050,7 +2060,7 @@ input[type="radio"].disabled ~ label::after {
 
 /*------------------MODALS---------------------*/
 .modal-window__map {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -2075,17 +2085,17 @@ input[type="radio"].disabled ~ label::after {
 }
 
 .modal-window__form_mail {
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%);
+    position: absolute;
+    bottom: 300px;
+    left: 60%;
     width: 620px;
     height: 430px;
     margin: auto;
     box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75),
                 0 -7px 0 0 #ee3643;
     z-index: 10;
-    background-color: #ffffff;
+    background-color: #ee3643;
+    transform: scale(0.5, 0.1);
     transition: 0.5s
 }
 
@@ -2245,17 +2255,17 @@ input[type="radio"].disabled ~ label::after {
 
 
 @keyframes bounce {
-  0% {
-    transform: translateY(60%) scale(0.5, 0.1);
-    background-color: #ee3643;
-  }
   100% {
     transform: translate(-50%) scale(1);
+    background-color: #ffffff;
+    top: 30%;
+    left: 50%;
   }
 }
 
 .modal-window-open {
     display: block;
+    position: fixed;
     animation: bounce 0.3s;
     animation-timing-function: ease-in;
     animation-direction: alternate;
