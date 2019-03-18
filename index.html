@@ -12,7 +12,7 @@
             <div class="main-header__top">
                 <div class="container">
                     <div class="main-header__top_container">
-                        <a href="#" id="header-logo" class="logo main-header__logo"><img src="img/general/icon/tehnomart.svg" alt="Логотип компании Техномарт, переход на главную страницу" width="110" height="13"/></a>
+                        <a href="index.html" id="header-logo" class="logo main-header__logo"><img src="img/general/icon/tehnomart.svg" alt="Логотип компании Техномарт, переход на главную страницу" width="110" height="13"/></a>
                         <form action="https://echo.htmlacademy.ru" method="post">
                             <input type="search" name="search" id="header_search" value="" aria-label="поиск по сайту" placeholder="Поиск:">
                             <label for="header_search" class="visually-hidden">Поиск:</label>
@@ -37,7 +37,7 @@
                         <a href="tel:+78125550555" class="main-header__section_phone">+7&nbsp;(812)&nbsp;555-05-55</a>
                         <a href="#" class="main-header__section_adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
                     </div>
-                    <ul class="main-header__section_not-authorized hidden">
+                    <ul class="main-header__section_not-authorized">
                         <li>
                             <a href="#" class="btn main-header__section_btn-enter">Войти</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
@@ -49,14 +49,13 @@
                             <a href="#" class="btn main-header__section_btn-registration">Регистрация</a>
                         </li>
                     </ul>
-                    <ul class="main-header__section_authorized">
+                    <ul class="main-header__section_authorized hidden">
                         <li class="main-header__section_profile">
                             <a href="#" class="main-header__section_name">
                                 <svg class="login" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
                                     <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
                                 </svg>Равшан Джамшутович
                             </a>
-
                             <a href="#" class="main-header__section_exit-profile" aria-label="Выход из профиля">
                                 <svg class="logout" xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
                                 <g>
@@ -118,6 +117,7 @@
                                 </li>
                             </ul>
                             <ul class="offers__slides">
+                                <li class="arrow arrowleft"></li>
                                 <li class="offers__drills">
                                     <h3>дрели</h3>
                                     <span>Соседям на радость!</span>
@@ -128,6 +128,7 @@
                                     <span>Настоящие мужские игрушки</span>
                                     <a href="catalog.html" class="btn main__btn">открыть каталог</a>
                                 </li>
+                                <li class="arrow arrowright"></li>
                             </ul>
                         </div>
                         <ul class="offers__container_right-column">
@@ -222,19 +223,19 @@
             <div class="main-middle">
                 <div class="container">
                     <div class="main-middle_container">
-                        <h2 class="main-middle__title">сервисы</h2>
+                        <h2 class="main-middle__title"  id="tabs">сервисы</h2>
                         <p>
                             Хороший интернет-магазин отличается от плохого не только ценами!
                             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
                         </p>
                         <div class="main-middle__tabs">
                             <ul class="main-middle__list">
-                                <li class="main-middle__list_item"><a href="#" title="" onclick="tab1();">Доставка</a></li>
-                                <li class="main-middle__list_item"><a href="#" title="" onclick="tab2();">Гарантия</a></li>
-                                <li class="main-middle__list_item"><a href="#" title="" onclick="tab3();">Кредит</a></li>
+                                <li class="main-middle__list_item"><a href="#tabs" class="main-middle__list_item-link selection">Доставка</a></li>
+                                <li class="main-middle__list_item"><a href="#tabs" class="main-middle__list_item-link">Гарантия</a></li>
+                                <li class="main-middle__list_item"><a href="#tabs" class="main-middle__list_item-link">Кредит</a></li>
                             </ul>
                             <div class="main-middle__tabs-container">
-                                <div class="main-middle__tab">
+                                <div class="main-middle__tab selection">
                                     <h3>доставка</h3>
                                     <p>Мы с удовольствием доставим ваш товар прямо
                                         к вашему подъезду совершенно бесплатно!</p>

@@ -12,7 +12,7 @@
             <div class="main-header__top">
                 <div class="container">
                     <div class="main-header__top_container">
-                        <a href="#" id="header-logo" class="logo main-header__logo"><img src="img/general/icon/tehnomart.svg" alt="Логотип компании Техномарт, переход на главную страницу" width="110" height="13"/></a>
+                        <a href="index.html" id="header-logo" class="logo main-header__logo"><img src="img/general/icon/tehnomart.svg" alt="Логотип компании Техномарт, переход на главную страницу" width="110" height="13"/></a>
                         <form action="https://echo.htmlacademy.ru" method="post">
                             <input type="search" name="search" id="header_search" value="" aria-label="поиск по сайту" placeholder="Поиск:">
                             <label for="header_search" class="visually-hidden">Поиск:</label>
@@ -124,9 +124,15 @@
                                 <h2 class="">фильтр:</h2>
                                 <div class="catalog__perforators_price">
                                     <h3>цена:</h3>
-                                    <input type="range" name="range" min="0" max="30000" step="1" value="25000">
+                                    <div class="catalog__perforators_range">
+    								    <div class="range_line-green"></div>
+    									<div class="range_line-grey"></div>
+    								    <div class="range_circle-left"></div>
+    								    <div class="range_circle-right"></div>
+						            </div>
+                                    <!--<input type="range" name="range" min="0" max="30000" step="1" value="25000">-->
                                     <div  class="catalog__perforators_price-value">
-                                        <input type="text" name="text-min" value="0" aria-label="цена товара от"/>
+                                        <input type="text" name="text-min" value="0" aria-label="цена товара от"/><span>—</span>
                                         <input type="text" name="text-max" value="30000"  aria-label="цена товара до"/>
                                     </div>
                                 </div>
@@ -134,23 +140,23 @@
                                     <div class="catalog__perforators_manufacturer">
                                         <h3>производители:</h3>
                                             <ul>
-                                                <li>
+                                                <li class="catalog__manufacturer_item">
                                                     <input type="checkbox" name="bosch" id="manufacturer_BOSCH" checked />
                                                     <label for="manufacturer_BOSCH">BOSCH</label>
                                                 </li>
-                                                <li>
+                                                <li class="catalog__manufacturer_item">
                                                     <input type="checkbox" name="interskol" id="manufacturer_interskol" />
                                                     <label for="manufacturer_interskol">ИНТЕРСКОЛ</label>
                                                 </li>
-                                                <li>
+                                                <li class="catalog__manufacturer_item">
                                                     <input type="checkbox" name="makita" id="manufacturer_makita" checked />
                                                     <label for="manufacturer_makita">MAKITA</label>
                                                 </li>
-                                                <li>
+                                                <li class="catalog__manufacturer_item">
                                                     <input type="checkbox" name="dewalt" id="manufacturer_devolt" />
                                                     <label for="manufacturer_devolt">DEWALT</label>
                                                 </li>
-                                                <li>
+                                                <li class="catalog__manufacturer_item">
                                                     <input type="checkbox" name="hitachi" id="manufacturer_hitachi" class="disabled" disabled checked>
                                                     <label for="manufacturer_hitachi">HITACHI</label>
                                                 </li>
@@ -384,6 +390,6 @@
                 </div>
             </section>
         </div>
-        <script src="script2.js"></script>
+        <script src="scriptCatalog.js"></script>
     </body>
 </html>

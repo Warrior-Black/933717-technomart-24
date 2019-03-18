@@ -116,6 +116,38 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
+/*авторизация*/
+var login = document.querySelector(".main-header__section_not-authorized .main-header__section_btn-enter");
+var loginBlock = document.querySelector(".main-header__section_not-authorized");
+var logout = document.querySelector(".main-header__section_authorized .main-header__section_exit-profile");
+var logoutBlock = document.querySelector(".main-header__section_authorized");
+login.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    loginBlock.classList.add("hidden");
+    logoutBlock.classList.remove("hidden");
+});
+logout.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    logoutBlock.classList.add("hidden");
+    loginBlock.classList.remove("hidden");
+});
+
+/*слайдер*/
+var drills = document.querySelector(".offers__slides .offers__drills");
+var perforators = document.querySelector(".offers__slides .offers__perforators");
+var arrowLeft = document.querySelector(".offers__slides .arrowleft");
+var arrowRight = document.querySelector(".offers__slides .arrowright");
+arrowLeft.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    drills.classList.add("hidden");
+    perforators.classList.remove("hidden");
+});
+arrowRight.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    perforators.classList.add("hidden");
+    drills.classList.remove("hidden");
+});
+
 /*добавление в закладки*/
 var bookmarksIncrement = 0;
 var bookmarksCount = document.querySelector(".main-header__top_bookmarks span");
@@ -125,50 +157,36 @@ var bookmarks = function() {
 }
 
 /*оживление сервисов*/
-var delivery = document.querySelector(".main-middle__list main-middle__list_item:nth-of-type(1)");
-var deliveryTab = document.querySelector(".main-middle__tabs-container main-middle__tab:nth-of-type(1)");
-var warranty = document.querySelector(".main-middle__list main-middle__list_item:nth-of-type(2)");
-var warrantyTab = document.querySelector(".main-middle__tabs-container main-middle__tab:nth-of-type(2)");
-var credit = document.querySelector(".main-middle__list main-middle__list_item:nth-of-type(3)");
-var creditTab = document.querySelector(".main-middle__tabs-container main-middle__tab:nth-of-type(3)");
-var tab1 = function() {
+var delivery = document.querySelector(".main-middle__list_item:nth-of-type(1) .main-middle__list_item-link");
+var deliveryTab = document.querySelector(".main-middle__tabs-container .main-middle__tab:nth-of-type(1)");
+var warranty = document.querySelector(".main-middle__list_item:nth-of-type(2) .main-middle__list_item-link");
+var warrantyTab = document.querySelector(".main-middle__tabs-container .main-middle__tab:nth-of-type(2)");
+var credit = document.querySelector(".main-middle__list_item:nth-of-type(3) .main-middle__list_item-link");
+var creditTab = document.querySelector(".main-middle__tabs-container .main-middle__tab:nth-of-type(3)");
+delivery.addEventListener("click", function (evt) {
     evt.preventDefault();
     delivery.classList.add("selection");
     deliveryTab.classList.add("selection");
-    if (warranty.classList.contains("selection") && warrantyTab.classList.contains("selection")) {
-        warranty.classList.remove("selection");
-        warrantyTab.classList.remove("selection");
-    }
-    if (credit.classList.contains("selection") && credit.classList.contains("selection")) {
-        credit.classList.remove("selection");
-        creditTab.classList.remove("selection");
-    }
-}
-var tab2 = function() {
+    warranty.classList.remove("selection");
+    credit.classList.remove("selection");
+    warrantyTab.classList.remove("selection");
+    creditTab.classList.remove("selection");
+});
+warranty.addEventListener("click", function (evt) {
     evt.preventDefault();
     warranty.classList.add("selection");
     warrantyTab.classList.add("selection");
-    if (delivery.classList.contains("selection") && deliveryTab.classList.contains("selection")) {
-        delivery.classList.remove("selection");
-        deliveryTab.classList.remove("selection");
-    }
+    delivery.classList.remove("selection");
+    credit.classList.remove("selection");
     deliveryTab.classList.remove("selection");
-    if (credit.classList.contains("selection") && creditTab.classList.contains("selection")) {
-        credit.classList.remove("selection");
-        creditTab.classList.remove("selection");
-    }
-}
-var tab3 = function() {
+    creditTab.classList.remove("selection");
+});
+credit.addEventListener("click", function (evt) {
     evt.preventDefault();
     credit.classList.add("selection");
     creditTab.classList.add("selection");
-    if (warranty.classList.contains("selection") && warrantyTab.classList.contains("selection")) {
-        warranty.classList.remove("selection");
-        warrantyTab.classList.remove("selection");
-    }
+    delivery.classList.remove("selection");
+    warranty.classList.remove("selection");
     deliveryTab.classList.remove("selection");
-    if (delivery.classList.contains("selection") && deliveryTab.classList.contains("selection")) {
-        delivery.classList.remove("selection");
-        deliveryTab.classList.remove("selection");
-    }
-}
+    warrantyTab.classList.remove("selection");
+});

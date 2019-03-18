@@ -21,14 +21,14 @@ img {
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .container {
@@ -186,6 +186,7 @@ input[type="search"]:focus ~ svg {
 
 .main-header__top_bookmarks span {
     display: inline-block;
+    vertical-align: middle;
     width: 36px;
 }
 
@@ -201,6 +202,7 @@ input[type="search"]:focus ~ svg {
 
 .main-header__top_bookmarks::before {
     position: absolute;
+    top: 12px;
     left: 17px;
     width: 14px;
     height: 16px;
@@ -221,11 +223,12 @@ input[type="search"]:focus ~ svg {
 
 .main-header__top_basket {
     position: relative;
-    padding: 12px 0px 12px 50px;
+    padding: 12px 0px 11px 50px;
 }
 
 .main-header__top_basket span {
     display: inline-block;
+    vertical-align: middle;
     width: 39px;
 }
 
@@ -730,13 +733,40 @@ main .btn:active {
 .offers__slides {
     margin: 0;
     padding: 0;
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.offers__slides .arrow {
+    position: absolute;
+    width: 22px;
+    height: 40px;
+    background-image: url(img/general/icon/slider-left.svg);
+    background-repeat: no-repeat;
+    margin: 114px 25px;
+    cursor: pointer;
+}
+
+.offers__slides .arrowright {
+    top: 0px;
+    right: 0px;
+    transform: rotate(180deg);
 }
 
 .offers__drills,
 .offers__perforators {
     background-color: #000000;
-    background-image: url(img/index/drils.jpg);
     background-repeat: no-repeat;
+}
+
+.offers__drills {
+    background-image: url(img/index/drils.jpg);
+}
+
+.offers__perforators {
+    background-image: url(img/index/perforators.jpg);
 }
 
 .offers__slides li {
@@ -1134,32 +1164,33 @@ main .btn:active {
 }
 
 .main-middle__list li {
-    width: 240px;
-    height: 61px;
-    margin-bottom: 1px;
-    background-color: #32425c;
-    box-shadow:
-    0 1px 0 0 #293449,
-    inset 0 1px 0 0 #405069;
+    padding-bottom: 1px;
 }
 
 .main-middle__list_item {
     display: block;
 }
 
+.main-middle__list_item .main-middle__list_item-link {
+    background-color: #32425c;
+    box-shadow:
+    0 1px 0 0 #293449,
+    inset 0 1px 0 0 #405069;
+}
+
 .main-middle__list_item:nth-of-type(1) a {
     display: block;
-    padding: 14.5px 140px 21px 22px
+    padding: 14.5px 139.5px 17px 22px
 }
 
 .main-middle__list_item:nth-of-type(2) a {
     display: block;
-    padding: 14.5px 140px 20px 22px
+    padding: 14.5px 139.5px 16px 22px
 }
 
 .main-middle__list_item:nth-of-type(3) a {
     display: block;
-    padding: 14.5px 157px 20px 22px
+    padding: 14.5px 156.5px 17px 22px
 }
 
 .main-middle__list a {
@@ -1169,13 +1200,13 @@ main .btn:active {
     letter-spacing: 0.6px;
 }
 
-.main-middle__list_item:hover:not(.selection) a {
+.main-middle__list_item-link:hover:not(.selection) {
     background-color: #293449
 }
 
 .main-middle__list_item a:focus,
 .main-middle__list_item a:active,
-.selection a {
+.main-middle__list .selection {
     background-color: #ffffff;
     box-shadow:
     0 1px 0 0 #ffffff,
@@ -1196,11 +1227,12 @@ main .btn:active {
 
 .main-middle__tabs-container {
     flex-grow: 1;
-    background-image: url(img/index/delivery.png);
     margin-right: 1px;
     min-height: 286px;
-    background-repeat: no-repeat;
-    background-position: right bottom;
+}
+
+.main-middle__tabs-container .selection {
+    display: block;
 }
 
 .main-middle__tab h3 {
@@ -1217,6 +1249,21 @@ main .btn:active {
 .main-middle__tab {
     position: relative;
     margin-left: 80px;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-position: right top 25px;
+}
+
+.main-middle__tab:nth-of-type(1) {
+    background-image: url(img/index/delivery.png);
+}
+
+.main-middle__tab:nth-of-type(2) {
+    background-image: url(img/index/warranty.png);
+}
+
+.main-middle__tab:nth-of-type(3) {
+    background-image: url(img/index/credit.png);
 }
 
 .main-middle__tab p {
@@ -1669,35 +1716,100 @@ main .btn:active {
     margin-left: -0.3px
 }
 
-.catalog__perforators_price input {
-    font-size: 17px;
-    line-height: 18px;
-    text-align: center;
+.catalog__perforators_range {
+    position: relative;
     background-color: #f7f3ec;
-    border: none;
+    width: 220px;
+    height: 80px;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: 14.5px;
+    margin-bottom: 11px;
+    padding: 39px 20px
 }
 
-.catalog__perforators_price input[type="range"] {
+.range_line-grey {
+    position: absolute;
+    width:180px;
+    margin: auto;
+    height: 2px;
+    background-color: #d7dcde
+}
+
+.range_line-green {
+    position: absolute;
+    width: 152px;
+    margin: auto;
+    height: 2px;
+    background-color: #00ca74;
+    z-index: 1
+}
+
+.range_circle-left,
+.range_circle-right {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px #d7dcde;
+    cursor: pointer;
+    z-index: 2
+}
+
+.range_circle-right {
+    left: 160px
+}
+
+.range_circle-left::before,
+.range_circle-right::before {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #acacac;
+    z-index: 3
+}
+
+/*.catalog__perforators_price input[type="range"] {
     width: 220px;
     height: 99.5px;
-
-}
+}*/
 
 .catalog__perforators_price-value {
     display: flex;
     justify-content: space-between;
     height: 38px;
     margin-right: 20px;
-    margin-bottom: 27px;
-    margin-top: -2px
+    margin-bottom: 25px;
+    margin-top: -2px;
 }
 
 .catalog__perforators_price-value input {
-    width: 95px
+    width: 95px;
+    border-radius: 3px
 }
 
-.catalog__perforators_price-value input:first-of-type {
+.catalog__perforators_price-value input:nth-of-type(1) {
+    position: relative;
     padding-left: 5px;
+    padding-bottom: 3px
+}
+
+.catalog__perforators_price-value input+span {
+    padding-top: 10px
+}
+
+.catalog__perforators_price input {
+    font-size: 17px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #f7f3ec;
+    border: none;
 }
 
 .catalog__perforators_filter ul {
@@ -1758,6 +1870,18 @@ main .btn:active {
     transition: 0.2s ease-in;
 }
 
+.catalog__manufacturer_item:nth-of-type(3) label::before {
+    top: -1px
+}
+
+.catalog__manufacturer_item:nth-of-type(4) label::before {
+    top: -1px
+}
+
+.catalog__manufacturer_item:nth-of-type(5) label::before {
+    top: -1px
+}
+
 .catalog__perforators_power label::before {
     width: 25px;
     height: 25px;
@@ -1802,7 +1926,6 @@ input[type="checkbox"]:checked ~ label::after {
         4px -5px #c5c5c5,
         0px -6px white;
     opacity: 1;
-
 }
 
 input[type="radio"]:checked ~ label::after {
@@ -2213,8 +2336,9 @@ input[type="radio"].disabled ~ label::after {
 
 .modal-window__basket .btn {
     display: inline-block;
+    vertical-align: middle;
     width: 220px;
-    height: 38px;
+    height: 37px;
     border: none;
     border-radius: 3px;
     background-color: #ee3643;
