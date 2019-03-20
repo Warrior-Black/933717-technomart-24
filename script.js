@@ -82,6 +82,16 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
+/*добавление в закладки*/
+var bookmarksIncrement = 0;
+var bookmarksFull = document.querySelector(".main-header__top_bookmarks");
+var bookmarksCount = document.querySelector(".main-header__top_bookmarks span");
+var bookmarks = function() {
+    bookmarksIncrement ++;
+    bookmarksCount.innerHTML = bookmarksIncrement;
+    bookmarksFull.classList.add("fullbookmarks");
+}
+
 /*добавление  в корзину со всплытием модального окна*/
 var basketIncrement = 0;
 var basketFull = document.querySelector(".main-header__top_basket");
@@ -95,6 +105,7 @@ var basket = function() {
 var linkBasket = document.querySelectorAll(".popular-product__card a:first-of-type");
 var popupBasket = document.querySelector(".modal-window__basket");
 var closeBasket = popupBasket.querySelector(".close-window");
+var continueBasket = popupBasket.querySelector(".modal-window__basket_btn-continue");
 for (var i = 0; i < linkBasket.length; i++) {
     linkBasket[i].addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -103,6 +114,11 @@ for (var i = 0; i < linkBasket.length; i++) {
 }
 
 closeBasket.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupBasket.classList.remove("modal-window-open");
+});
+
+continueBasket.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupBasket.classList.remove("modal-window-open");
 });
@@ -147,14 +163,6 @@ arrowRight.addEventListener("click", function (evt) {
     perforators.classList.add("hidden");
     drills.classList.remove("hidden");
 });
-
-/*добавление в закладки*/
-var bookmarksIncrement = 0;
-var bookmarksCount = document.querySelector(".main-header__top_bookmarks span");
-var bookmarks = function() {
-    bookmarksIncrement ++;
-    bookmarksCount.innerHTML = bookmarksIncrement;
-}
 
 /*оживление сервисов*/
 var delivery = document.querySelector(".main-middle__list_item:nth-of-type(1) .main-middle__list_item-link");

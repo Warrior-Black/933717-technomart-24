@@ -104,7 +104,7 @@ img {
     width: 269px;
 }
 
-input[type="search"] {
+.header input[type="search"] {
     opacity: 1;
     background-color: #293449;
     padding-left: 47px;
@@ -116,65 +116,65 @@ input[type="search"] {
     transition: 0.3s
 }
 
-input[type="search"]::-moz-placeholder {
+.header input[type="search"]::-moz-placeholder {
     color: #ffffff;
 }
 
-input[type="search"]:focus::-moz-placeholder {
+.header input[type="search"]:focus::-moz-placeholder {
     color: #000000;
 }
 
-input[type="search"]::-webkit-input-placeholder {
+.header input[type="search"]::-webkit-input-placeholder {
     color: #ffffff;
 }
 
-input[type="search"]:focus::-webkit-input-placeholder {
+.header input[type="search"]:focus::-webkit-input-placeholder {
     color: #000000;
 }
 
-input[type="search"]:-ms-input-placeholder {
+.header input[type="search"]:-ms-input-placeholder {
     color: #ffffff;
 }
 
-input[type="search"]:focus:-ms-input-placeholder {
+.header input[type="search"]:focus:-ms-input-placeholder {
     color: #000000;
 }
 
-input[type="search"]::-ms-input-placeholder {
+.header input[type="search"]::-ms-input-placeholder {
     color: #ffffff;
 }
 
-input[type="search"]:focus::-ms-input-placeholder {
+.header input[type="search"]:focus::-ms-input-placeholder {
     color: #000000;
 }
 
-input[type="search"]::placeholder {
+.header input[type="search"]::placeholder {
     color: #ffffff;
 }
 
-input[type="search"]:focus::placeholder {
+.header input[type="search"]:focus::placeholder {
     color: #000000;
 }
 
-input[type="search"]:hover {
+.header input[type="search"]:hover {
     background-color: #212a3a
 }
 
-input[type="search"]:focus {
+.header input[type="search"]:focus {
     background-color: #ffffff;
     border: none;
     outline: none
 }
 
-input[type="search"]:hover ~ svg {
+.header input[type="search"]:hover ~ svg {
     opacity: 1;
 }
 
-input[type="search"]:active ~ svg {
+.header input[type="search"]:active ~ svg {
     opacity: 0.5;
 }
 
-input[type="search"]:focus ~ svg {
+.header input[type="search"]:focus ~ svg {
     opacity: 1;
     fill: #ee3643
 }
@@ -182,6 +182,10 @@ input[type="search"]:focus ~ svg {
 .main-header__top_bookmarks {
     position: relative;
     padding: 11px 0px 12px 44px;
+}
+
+.main-header__top .fullbookmarks {
+    background-color: #ee3643
 }
 
 .main-header__top_bookmarks span {
@@ -1116,7 +1120,7 @@ main .btn:active {
 /*---------------------------MIDDLE SECTION----------------------------*/
 .main-middle {
     background-color: #f4f7f9;
-    margin-bottom: 79px;/*необходима правка*/
+    margin-bottom: 79px;
     min-width: 960px;
 }
 
@@ -1163,12 +1167,9 @@ main .btn:active {
     list-style: none;
 }
 
-.main-middle__list li {
-    padding-bottom: 1px;
-}
-
 .main-middle__list_item {
     display: block;
+    padding-bottom: 1px;
 }
 
 .main-middle__list_item .main-middle__list_item-link {
@@ -1176,36 +1177,34 @@ main .btn:active {
     box-shadow:
     0 1px 0 0 #293449,
     inset 0 1px 0 0 #405069;
-}
-
-.main-middle__list_item:nth-of-type(1) a {
-    display: block;
-    padding: 14.5px 139.5px 17px 22px
-}
-
-.main-middle__list_item:nth-of-type(2) a {
-    display: block;
-    padding: 14.5px 139.5px 16px 22px
-}
-
-.main-middle__list_item:nth-of-type(3) a {
-    display: block;
-    padding: 14.5px 156.5px 17px 22px
-}
-
-.main-middle__list a {
+    border: none;
     color: #ffffff;
     font-size: 21px;
     line-height: 30px;
     letter-spacing: 0.6px;
 }
 
+.main-middle__list_item:nth-of-type(1) button {
+    display: block;
+    padding: 14.5px 139.2px 17px 22px
+}
+
+.main-middle__list_item:nth-of-type(2) button {
+    display: block;
+    padding: 14.5px 139.7px 16px 22.5px
+}
+
+.main-middle__list_item:nth-of-type(3) button {
+    display: block;
+    padding: 14.5px 156.9px 17px 22px
+}
+
 .main-middle__list_item-link:hover:not(.selection) {
     background-color: #293449
 }
 
-.main-middle__list_item a:focus,
-.main-middle__list_item a:active,
+.main-middle__list_item button:focus,
+.main-middle__list_item button:active,
 .main-middle__list .selection {
     background-color: #ffffff;
     box-shadow:
@@ -1430,6 +1429,7 @@ main .btn:active {
     margin-top: 37px;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .main-footer__cite-nav a {
@@ -1461,7 +1461,8 @@ main .btn:active {
     color: #ffffff;
     font-size: 18px;
     line-height: 24px;
-    width: 325px
+    width: 325px;
+    min-width: 325px
 }
 
 .main-footer__middle a:first-of-type {
@@ -1471,6 +1472,7 @@ main .btn:active {
 
 .main-footer__offers-nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
     margin: 0;
     padding: 0;
@@ -1775,16 +1777,18 @@ main .btn:active {
     z-index: 3
 }
 
-/*.catalog__perforators_price input[type="range"] {
-    width: 220px;
-    height: 99.5px;
-}*/
+.catalog__perforators_price input {
+    font-size: 17px;
+    line-height: 18px;
+    text-align: center;
+    background-color: #f7f3ec;
+    border: none;
+}
 
-.catalog__perforators_price-value {
+.catalog__perforators_filter .catalog__perforators_price-value {
     display: flex;
     justify-content: space-between;
     height: 38px;
-    margin-right: 20px;
     margin-bottom: 25px;
     margin-top: -2px;
 }
@@ -1802,14 +1806,6 @@ main .btn:active {
 
 .catalog__perforators_price-value input+span {
     padding-top: 10px
-}
-
-.catalog__perforators_price input {
-    font-size: 17px;
-    line-height: 18px;
-    text-align: center;
-    background-color: #f7f3ec;
-    border: none;
 }
 
 .catalog__perforators_filter ul {
@@ -2272,6 +2268,19 @@ input[type="radio"].disabled ~ label::after {
     line-height: 18px;
 }
 
+.modal-window__form_container input:hover,
+.modal-window__form_container textarea:hover {
+    border-color: #b5b5b5
+}
+
+.modal-window__form_container input:focus,
+.modal-window__form_container textarea:focus,
+.modal-window__form_container input:active,
+.modal-window__form_container textarea:active {
+    border-color: #ee3643;
+    outline: none
+}
+
 .modal-window__form_btn-container {
     background-color: #f4f4f4;
     width: 620px;
@@ -2328,7 +2337,7 @@ input[type="radio"].disabled ~ label::after {
     content: "";
     width: 67px;
     height: 67px;
-    background-image: url(img/general/icon/basket-OK.svg);
+    background-image: url(img/general/icon/basket-ok.svg);
     background-repeat: no-repeat;
     left: 81px;
     top: -15px;
