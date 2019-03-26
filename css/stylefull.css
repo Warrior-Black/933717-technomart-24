@@ -344,9 +344,9 @@ img {
     font-style: italic;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    width: 200px;
+    width: 197px;
     margin-left: 52px;
-    margin-right: 68px;
+    margin-right: 70px;
 }
 
 .main-header__section a {
@@ -839,7 +839,7 @@ main .btn:active {
 
 .offers__slides .arrowright {
     top: 0px;
-    right: 0px;
+    right: -5px;
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
@@ -1535,7 +1535,8 @@ main .btn:active {
     width: 300px;
     height: 158px;
     margin-bottom: auto;
-    margin-top: 10.5px
+    margin-top: 10.5px;
+    background-color: #f9f5f0
 }
 
 .main-bottom .btn {
@@ -2166,6 +2167,7 @@ input[type="radio"]:not(.disabled):hover ~ label:before {
 input[type="checkbox"]:focus ~ label:before,
 input[type="radio"]:focus ~ label:before {
     border-color: #b5b5b5;
+    box-shadow: 0 0 0 1px #3c76ff
 }
 
 input[type="checkbox"]:not(.disabled):checked:hover ~ label::after,
@@ -2431,11 +2433,8 @@ input[type="radio"].disabled ~ label::after {
 /*------------------MODALS---------------------*/
 .modal-window__map {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     width: 940px;
     height: 446.2px;
     background-color: #f1f5f7;
@@ -2443,6 +2442,9 @@ input[type="radio"].disabled ~ label::after {
     -webkit-box-shadow: 0 -2px 25px 0 rgba(41, 52, 73, 0.5);
             box-shadow: 0 -2px 25px 0 rgba(41, 52, 73, 0.5);
     z-index: 10;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s
 }
 
 .close-window {
@@ -2470,10 +2472,6 @@ input[type="radio"].disabled ~ label::after {
             box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.75),
                 0 -7px 0 0 #ee3643;
     z-index: 10;
-    background-color: #ee3643;
-    -webkit-transform: scale(0.5, 0.1);
-        -ms-transform: scale(0.5, 0.1);
-            transform: scale(0.5, 0.1);
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s
@@ -2572,7 +2570,7 @@ input[type="radio"].disabled ~ label::after {
 
 .modal-window__basket {
     position: fixed;
-    top: 50%;
+    top: 25%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -2655,28 +2653,6 @@ input[type="radio"].disabled ~ label::after {
     display: none;
 }
 
-
-@-webkit-keyframes bounce {
-  100% {
-    -webkit-transform: translate(-50%) scale(1);
-            transform: translate(-50%) scale(1);
-    background-color: #ffffff;
-    top: 30%;
-    left: 50%;
-  }
-}
-
-
-@keyframes bounce {
-  100% {
-    -webkit-transform: translate(-50%) scale(1);
-            transform: translate(-50%) scale(1);
-    background-color: #ffffff;
-    top: 30%;
-    left: 50%;
-  }
-}
-
 .modal-window-open {
     display: block;
     position: fixed;
@@ -2688,4 +2664,48 @@ input[type="radio"].disabled ~ label::after {
             animation-direction: alternate;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
+    background-color: #ffffff;
+}
+
+.modal-error {
+    left: 50%;
+    background-color: #ffffff;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    animation: shake 0.6s;
+}
+
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
+    }
+    100% {
+        background-color: #ffffff;
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
+        left: 50%;
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-51%);
+        }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(-49%);
+    }
 }
